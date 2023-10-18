@@ -3,7 +3,54 @@ entries:
   opentelemetry-demo:
   - apiVersion: v2
     appVersion: 1.5.0
-    created: "2023-10-18T16:59:40.089021-04:00"
+    created: "2023-10-18T17:13:15.560811-04:00"
+    dependencies:
+    - condition: opentelemetry-collector.enabled
+      name: opentelemetry-collector
+      repository: https://open-telemetry.github.io/opentelemetry-helm-charts
+      version: 0.68.0
+    - condition: opentelemetry-collector-ingress.enabled
+      name: opentelemetry-collector-ingress
+      repository: file://./charts/opentelemetry-collector-ingress
+      version: 0.68.0
+    - condition: opentelemetry-collector-pipeline.enabled
+      name: opentelemetry-collector-pipeline
+      repository: file://./charts/opentelemetry-collector-pipeline
+      version: 0.68.0
+    - condition: opentelemetry-collector-egress.enabled
+      name: opentelemetry-collector-egress
+      repository: file://./charts/opentelemetry-collector-egress
+      version: 0.68.0
+    - condition: jaeger.enabled
+      name: jaeger
+      repository: https://jaegertracing.github.io/helm-charts
+      version: 0.71.14
+    - condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 25.0.0
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.58.8
+    description: opentelemetry demo helm chart
+    digest: 653d26e4ce1a83490c1f0052ecdbdb70ed3481c1060ba3ef55ba9d530a4d72a8
+    home: https://opentelemetry.io/
+    icon: https://opentelemetry.io/img/logos/opentelemetry-logo-nav.png
+    maintainers:
+    - name: dmitryax
+    - name: puckpuck
+    - name: tylerhelmuth
+    name: opentelemetry-demo
+    sources:
+    - https://github.com/open-telemetry/opentelemetry-demo
+    type: application
+    urls:
+    - opentelemetry-demo-0.25.4.tgz
+    version: 0.25.4
+  - apiVersion: v2
+    appVersion: 1.5.0
+    created: "2023-10-18T17:13:15.538157-04:00"
     dependencies:
     - condition: opentelemetry-collector.enabled
       name: opentelemetry-collector
@@ -50,7 +97,7 @@ entries:
     version: 0.25.3
   - apiVersion: v2
     appVersion: 1.5.0
-    created: "2023-10-18T16:59:40.066246-04:00"
+    created: "2023-10-18T17:13:15.515798-04:00"
     dependencies:
     - condition: opentelemetry-collector.enabled
       name: opentelemetry-collector
@@ -97,7 +144,7 @@ entries:
     version: 0.25.2
   - apiVersion: v2
     appVersion: 1.5.0
-    created: "2023-10-18T16:59:40.040421-04:00"
+    created: "2023-10-18T17:13:15.489871-04:00"
     dependencies:
     - condition: opentelemetry-collector.enabled
       name: opentelemetry-collector
@@ -142,4 +189,4 @@ entries:
     urls:
     - opentelemetry-demo-0.25.1.tgz
     version: 0.25.1
-generated: "2023-10-18T16:59:40.015547-04:00"
+generated: "2023-10-18T17:13:15.461142-04:00"
