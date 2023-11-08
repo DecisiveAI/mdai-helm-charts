@@ -3,7 +3,7 @@ entries:
   opentelemetry-demo:
   - apiVersion: v2
     appVersion: 1.5.0
-    created: "2023-10-19T16:16:33.394358-04:00"
+    created: "2023-11-08T13:31:16.020173-05:00"
     dependencies:
     - condition: opentelemetry-collector.enabled
       name: opentelemetry-collector
@@ -51,7 +51,17 @@ entries:
   otelcol-sample:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-19T16:16:33.394816-04:00"
+    created: "2023-11-08T13:31:16.021557-05:00"
+    description: A Helm chart for Kubernetes
+    digest: c8d0b9023997812260dc2e6621cb65a5370396cd442f3aaf4194b1d25da074e1
+    name: otelcol-sample
+    type: application
+    urls:
+    - otelcol-sample-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-11-08T13:31:16.020567-05:00"
     description: A Helm chart for Kubernetes
     digest: 30fc6951b1cb154a07955533f6309e85fb3e737b1a24445895218057fa4dc3f6
     name: otelcol-sample
@@ -59,4 +69,4 @@ entries:
     urls:
     - otelcol-sample-0.1.0.tgz
     version: 0.1.0
-generated: "2023-10-19T16:16:33.369911-04:00"
+generated: "2023-11-08T13:31:15.996459-05:00"
