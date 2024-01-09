@@ -14,9 +14,9 @@ entries:
   mydecisive-engine-ui:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-01-09T10:18:22.719783-07:00"
+    created: "2024-01-09T10:28:09.412004-07:00"
     description: MyDecisive Engine UI helm charts
-    digest: 0dbc721f2c7aa9debb7fb19d20ce5f0d1f446e6eced76df7eeafd510d8f1fe22
+    digest: eed2b4290ec060fb25a0d5ece839467694a1d2e49d4ed6fb36efd4d162ef708a
     name: mydecisive-engine-ui
     type: application
     urls:
@@ -111,4 +111,4 @@ entries:
     urls:
     - otelcol-sample-0.1.0.tgz
     version: 0.1.0
-generated: "2024-01-09T10:18:22.718557-07:00"
+generated: "2024-01-09T10:28:09.410849-07:00"
