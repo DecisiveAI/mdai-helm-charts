@@ -3,7 +3,7 @@ entries:
   mydecisive-api:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-01-09T11:06:51.853179-07:00"
+    created: "2024-02-20T21:10:24.380523-05:00"
     description: MyDecisive API helm charts
     digest: 6d35713bb79edef272da5420548476ec33874e5d4707d15eaef02bab98c961f9
     name: mydecisive-api
@@ -13,7 +13,7 @@ entries:
     version: 0.0.2
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-01-04T15:44:22.696025-07:00"
+    created: "2024-02-20T21:10:24.380142-05:00"
     description: MyDecisive API helm charts
     digest: 9109eaa72fa1ce8ee42ff7a9b0081aeafa2c97654bc8dba13925a9d388ad851c
     name: mydecisive-api
@@ -24,7 +24,7 @@ entries:
   mydecisive-engine-ui:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-01-31T14:40:42.993959-07:00"
+    created: "2024-02-20T21:10:24.381799-05:00"
     description: MyDecisive Engine UI helm charts
     digest: 5ffbb61fcafde50d027b0202fa864d3f8cd07048d73480d4fbf1599c32b276f4
     name: mydecisive-engine-ui
@@ -34,7 +34,7 @@ entries:
     version: 0.0.5
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-01-23T10:02:37.72704-07:00"
+    created: "2024-02-20T21:10:24.381566-05:00"
     description: MyDecisive Engine UI helm charts
     digest: e964561c565befd3512e68e6673fa0d8981e3e919f5149f87ec4238cdc2ef1ca
     name: mydecisive-engine-ui
@@ -44,7 +44,7 @@ entries:
     version: 0.0.4
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-01-09T10:28:09.412004-07:00"
+    created: "2024-02-20T21:10:24.381323-05:00"
     description: MyDecisive Engine UI helm charts
     digest: eed2b4290ec060fb25a0d5ece839467694a1d2e49d4ed6fb36efd4d162ef708a
     name: mydecisive-engine-ui
@@ -54,7 +54,7 @@ entries:
     version: 0.0.3
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-01-05T10:08:47.849183-07:00"
+    created: "2024-02-20T21:10:24.381081-05:00"
     description: MyDecisive Engine UI helm charts
     digest: 62756933761cec232974f94dcd33f367761ccd86799f8d8613ac82bbe98ab01b
     name: mydecisive-engine-ui
@@ -64,7 +64,7 @@ entries:
     version: 0.0.2
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-01-04T15:42:24.82095-07:00"
+    created: "2024-02-20T21:10:24.380847-05:00"
     description: MyDecisive Engine UI helm charts
     digest: effbbc6933a257139f5005b07a6d99d75893e06692d364a3dd33732cfdb36718
     name: mydecisive-engine-ui
@@ -75,7 +75,7 @@ entries:
   opentelemetry-demo:
   - apiVersion: v2
     appVersion: 1.5.0
-    created: "2023-11-08T13:31:16.020173-05:00"
+    created: "2024-02-20T21:10:24.475368-05:00"
     dependencies:
     - condition: opentelemetry-collector.enabled
       name: opentelemetry-collector
@@ -120,10 +120,170 @@ entries:
     urls:
     - opentelemetry-demo-0.25.4.tgz
     version: 0.25.4
+  - apiVersion: v2
+    appVersion: 1.5.0
+    created: "2024-02-20T21:10:24.453083-05:00"
+    dependencies:
+    - condition: opentelemetry-collector.enabled
+      name: opentelemetry-collector
+      repository: https://open-telemetry.github.io/opentelemetry-helm-charts
+      version: 0.68.0
+    - condition: opentelemetry-collector-ingress.enabled
+      name: opentelemetry-collector-ingress
+      repository: file://./charts/opentelemetry-collector-ingress
+      version: 0.68.0
+    - condition: opentelemetry-collector-pipeline.enabled
+      name: opentelemetry-collector-pipeline
+      repository: file://./charts/opentelemetry-collector-pipeline
+      version: 0.68.0
+    - condition: opentelemetry-collector-egress.enabled
+      name: opentelemetry-collector-egress
+      repository: file://./charts/opentelemetry-collector-egress
+      version: 0.68.0
+    - condition: jaeger.enabled
+      name: jaeger
+      repository: https://jaegertracing.github.io/helm-charts
+      version: 0.71.14
+    - condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 25.0.0
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.58.8
+    description: opentelemetry demo helm chart
+    digest: 0631dca1dc05f57b545e234ea137894b3bfe99034d67449868f9bfcd33f91037
+    home: https://opentelemetry.io/
+    icon: https://opentelemetry.io/img/logos/opentelemetry-logo-nav.png
+    maintainers:
+    - name: dmitryax
+    - name: puckpuck
+    - name: tylerhelmuth
+    name: opentelemetry-demo
+    sources:
+    - https://github.com/open-telemetry/opentelemetry-demo
+    type: application
+    urls:
+    - opentelemetry-demo-0.25.3.tgz
+    version: 0.25.3
+  - apiVersion: v2
+    appVersion: 1.5.0
+    created: "2024-02-20T21:10:24.430509-05:00"
+    dependencies:
+    - condition: opentelemetry-collector.enabled
+      name: opentelemetry-collector
+      repository: https://open-telemetry.github.io/opentelemetry-helm-charts
+      version: 0.68.0
+    - condition: opentelemetry-collector-ingress.enabled
+      name: opentelemetry-collector-ingress
+      repository: file://./charts/opentelemetry-collector-ingress
+      version: 0.68.0
+    - condition: opentelemetry-collector-pipeline.enabled
+      name: opentelemetry-collector-pipeline
+      repository: file://./charts/opentelemetry-collector-pipeline
+      version: 0.68.0
+    - condition: opentelemetry-collector-egress.enabled
+      name: opentelemetry-collector-egress
+      repository: file://./charts/opentelemetry-collector-egress
+      version: 0.68.0
+    - condition: jaeger.enabled
+      name: jaeger
+      repository: https://jaegertracing.github.io/helm-charts
+      version: 0.71.14
+    - condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 25.0.0
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.58.8
+    description: opentelemetry demo helm chart
+    digest: b4a32942dcf199e4033dcbadede3e93d1a9861cbe0a7e7d38d9433d572606d5e
+    home: https://opentelemetry.io/
+    icon: https://opentelemetry.io/img/logos/opentelemetry-logo-nav.png
+    maintainers:
+    - name: dmitryax
+    - name: puckpuck
+    - name: tylerhelmuth
+    name: opentelemetry-demo
+    sources:
+    - https://github.com/open-telemetry/opentelemetry-demo
+    type: application
+    urls:
+    - opentelemetry-demo-0.25.2.tgz
+    version: 0.25.2
+  - apiVersion: v2
+    appVersion: 1.5.0
+    created: "2024-02-20T21:10:24.407447-05:00"
+    dependencies:
+    - condition: opentelemetry-collector.enabled
+      name: opentelemetry-collector
+      repository: https://open-telemetry.github.io/opentelemetry-helm-charts
+      version: 0.68.0
+    - condition: opentelemetry-collector-ingress.enabled
+      name: opentelemetry-collector-ingress
+      repository: file://./charts/opentelemetry-collector-ingress
+      version: 0.68.0
+    - condition: opentelemetry-collector-pipeline.enabled
+      name: opentelemetry-collector-pipeline
+      repository: file://./charts/opentelemetry-collector-pipeline
+      version: 0.68.0
+    - condition: opentelemetry-collector-egress.enabled
+      name: opentelemetry-collector-egress
+      repository: file://./charts/opentelemetry-collector-egress
+      version: 0.68.0
+    - condition: jaeger.enabled
+      name: jaeger
+      repository: https://jaegertracing.github.io/helm-charts
+      version: 0.71.14
+    - condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 25.0.0
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.58.8
+    description: opentelemetry demo helm chart
+    digest: 945b11a186949f9e8fd41311fef5b100f9e356aa2a47a8a4ca09aa437f04bc44
+    home: https://opentelemetry.io/
+    icon: https://opentelemetry.io/img/logos/opentelemetry-logo-nav.png
+    maintainers:
+    - name: dmitryax
+    - name: puckpuck
+    - name: tylerhelmuth
+    name: opentelemetry-demo
+    sources:
+    - https://github.com/open-telemetry/opentelemetry-demo
+    type: application
+    urls:
+    - opentelemetry-demo-0.25.1.tgz
+    version: 0.25.1
+  opentelemetry-operator:
+  - apiVersion: v2
+    appVersion: 0.89.0
+    created: "2024-02-20T21:10:24.477765-05:00"
+    description: OpenTelemetry Operator Helm chart for Kubernetes
+    digest: f1db84b08dbdd211ed713e45d2fbc0a7b59bd1c363c0efb40c1e17d8d9d2d60f
+    home: https://opentelemetry.io/
+    icon: https://raw.githubusercontent.com/cncf/artwork/a718fa97fffec1b9fd14147682e9e3ac0c8817cb/projects/opentelemetry/icon/color/opentelemetry-icon-color.png
+    maintainers:
+    - name: Allex1
+    - name: dmitryax
+    - name: TylerHelmuth
+    name: opentelemetry-operator
+    sources:
+    - https://github.com/open-telemetry/opentelemetry-operator
+    type: application
+    urls:
+    - opentelemetry-operator-0.43.1.tgz
+    version: 0.43.1
   otelcol-sample:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-11-08T13:31:16.021557-05:00"
+    created: "2024-02-20T21:10:24.478436-05:00"
     description: A Helm chart for Kubernetes
     digest: c8d0b9023997812260dc2e6621cb65a5370396cd442f3aaf4194b1d25da074e1
     name: otelcol-sample
@@ -133,7 +293,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-11-08T13:31:16.020567-05:00"
+    created: "2024-02-20T21:10:24.478105-05:00"
     description: A Helm chart for Kubernetes
     digest: 30fc6951b1cb154a07955533f6309e85fb3e737b1a24445895218057fa4dc3f6
     name: otelcol-sample
@@ -141,4 +301,4 @@ entries:
     urls:
     - otelcol-sample-0.1.0.tgz
     version: 0.1.0
-generated: "2024-02-05T10:42:50.850242-07:00"
+generated: "2024-02-20T21:10:24.379085-05:00"
