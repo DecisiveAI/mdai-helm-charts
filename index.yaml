@@ -1,5 +1,27 @@
 apiVersion: v1
 entries:
+  mdai-api:
+  - apiVersion: v2
+    appVersion: 0.0.1-alpha
+    created: "2024-03-01T16:09:39.34025-07:00"
+    description: MyDecisive API helm charts
+    digest: 494e5ab75aacf67b447b907a66e6c7b6a7395e2ae6ecbc3ecb7a3fc1da225981
+    name: mdai-api
+    type: application
+    urls:
+    - mdai-api-0.0.3.tgz
+    version: 0.0.3
+  mdai-console:
+  - apiVersion: v2
+    appVersion: 0.0.1-alpha
+    created: "2024-03-01T15:56:56.112122-07:00"
+    description: MyDecisive Engine UI helm charts
+    digest: 6b0684384b655e535f44b4cf3366acbbe30f7d565a3fc9f512790045bca1c18d
+    name: mdai-console
+    type: application
+    urls:
+    - mdai-console-0.0.6.tgz
+    version: 0.0.6
   mydecisive-api:
   - apiVersion: v2
     appVersion: 0.0.1-alpha
@@ -331,4 +353,4 @@ entries:
     urls:
     - otelcol-sample-0.1.0.tgz
     version: 0.1.0
-generated: "2024-02-28T13:49:57.645599-05:00"
+generated: "2024-03-01T16:09:39.33926-07:00"
