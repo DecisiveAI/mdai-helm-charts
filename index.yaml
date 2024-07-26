@@ -55,6 +55,16 @@ entries:
   mdai-console:
   - apiVersion: v2
     appVersion: 0.2.3
+    created: "2024-07-26T12:23:03.29082-07:00"
+    description: MyDecisive Engine UI helm charts
+    digest: bb0b19eab480e2f17ceeae5bae41e805ab0e7cc154a00e6912eb950c243e8186
+    name: mdai-console
+    type: application
+    urls:
+    - mdai-console-0.2.4.tgz
+    version: 0.2.4
+  - apiVersion: v2
+    appVersion: 0.2.3
     created: "2024-07-25T15:24:08.075858-07:00"
     description: MyDecisive Engine UI helm charts
     digest: 2d013e601bdd484911da9105321e48d6c2ab14ec229559ba6a60176c28c2c6e1
@@ -565,4 +575,4 @@ entries:
     urls:
     - otelcol-sample-0.1.0.tgz
     version: 0.1.0
-generated: "2024-07-25T15:24:08.075215-07:00"
+generated: "2024-07-26T12:23:03.290297-07:00"
