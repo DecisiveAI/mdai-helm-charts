@@ -3,6 +3,16 @@ entries:
   datalyzer:
   - apiVersion: v2
     appVersion: 0.0.5
+    created: "2024-09-13T12:52:56.636998-05:00"
+    description: MyDecisive Datalyzer helm charts
+    digest: 9d200915adae236fe3ea0a1c8fbee814676a5bf08d82fcae4aca1491e652475a
+    name: datalyzer
+    type: application
+    urls:
+    - datalyzer-0.0.6.tgz
+    version: 0.0.6
+  - apiVersion: v2
+    appVersion: 0.0.5
     created: "2024-08-20T18:02:28.758707-07:00"
     description: MyDecisive Datalyzer helm charts
     digest: 554167f21643afd005bba4a75eeb1e7a2a47b5ffaf302194b86caec6daecb2e8
@@ -686,4 +696,4 @@ entries:
     urls:
     - otelcol-sample-0.1.0.tgz
     version: 0.1.0
-generated: "2024-09-10T12:04:21.757822-07:00"
+generated: "2024-09-13T12:52:56.636019-05:00"
