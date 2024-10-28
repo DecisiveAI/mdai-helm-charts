@@ -377,6 +377,16 @@ entries:
     version: 0.0.1
   mydecisive-engine-operator:
   - apiVersion: v2
+    appVersion: 0.0.9
+    created: "2024-10-28T14:08:58.099195-04:00"
+    description: MyDecisive Operator Helm Chart
+    digest: 23a85795e918f46c3efd21c135f67bbf3cd97188c8708b779264ea10f80cd1dd
+    name: mydecisive-engine-operator
+    type: application
+    urls:
+    - mydecisive-engine-operator-0.0.13.tgz
+    version: 0.0.13
+  - apiVersion: v2
     appVersion: 0.0.8
     created: "2024-10-15T16:04:07.705314-05:00"
     description: MyDecisive Operator Helm Chart
@@ -796,4 +806,4 @@ entries:
     urls:
     - otelcol-sample-0.1.0.tgz
     version: 0.1.0
-generated: "2024-10-15T16:04:07.699918-05:00"
+generated: "2024-10-28T14:08:58.094429-04:00"
