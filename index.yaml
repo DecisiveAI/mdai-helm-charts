@@ -74,6 +74,46 @@ entries:
     version: 0.0.3
   mdai-cluster:
   - apiVersion: v2
+    appVersion: 0.0.5
+    created: "2024-10-30T11:55:26.009557-05:00"
+    dependencies:
+    - condition: opentelemetry-operator.enabled
+      name: opentelemetry-operator
+      repository: https://open-telemetry.github.io/opentelemetry-helm-charts
+      version: 0.71.2
+    - condition: kube-prometheus-stack.enabled
+      name: kube-prometheus-stack
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 65.3.1
+    - condition: metrics-server.enabled
+      name: metrics-server
+      repository: https://kubernetes-sigs.github.io/metrics-server
+      version: 3.12.1
+    - condition: mdai-api.enabled
+      name: mdai-api
+      repository: https://decisiveai.github.io/mdai-helm-charts
+      version: 0.0.4
+    - condition: mdai-console.enabled
+      name: mdai-console
+      repository: https://decisiveai.github.io/mdai-helm-charts
+      version: 0.2.4
+    - condition: datalyzer.enabled
+      name: datalyzer
+      repository: https://decisiveai.github.io/mdai-helm-charts
+      version: 0.0.6
+    - alias: mdai-operator
+      condition: mdai-operator.enabled
+      name: mydecisive-engine-operator
+      repository: https://decisiveai.github.io/mdai-helm-charts
+      version: 0.0.14
+    description: MDAI Cluster helm chart
+    digest: 9bf27640595848d72e023cc1165d0df379a2c242824c324d1ebefcec04144858
+    name: mdai-cluster
+    type: application
+    urls:
+    - mdai-cluster-0.0.5.tgz
+    version: 0.0.5
+  - apiVersion: v2
     appVersion: 0.0.4
     created: "2024-10-18T13:43:24.544898-05:00"
     dependencies:
@@ -816,4 +856,4 @@ entries:
     urls:
     - otelcol-sample-0.1.0.tgz
     version: 0.1.0
-generated: "2024-10-30T08:50:40.109487-07:00"
+generated: "2024-10-30T11:55:25.984368-05:00"
