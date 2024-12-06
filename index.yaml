@@ -3,7 +3,7 @@ entries:
   datalyzer:
   - apiVersion: v2
     appVersion: 0.0.7
-    created: "2024-11-08T16:37:28.432407-06:00"
+    created: "2024-12-06T15:33:04.619314-05:00"
     description: MyDecisive Datalyzer helm charts
     digest: 8e7739853855f5035a68ee324ac4d07ba9f07e857ee2b5e8f4dde7703feb8d1e
     name: datalyzer
@@ -13,7 +13,7 @@ entries:
     version: 0.0.8
   - apiVersion: v2
     appVersion: 0.0.5
-    created: "2024-09-13T12:52:56.636998-05:00"
+    created: "2024-12-06T15:33:04.618811-05:00"
     description: MyDecisive Datalyzer helm charts
     digest: 9d200915adae236fe3ea0a1c8fbee814676a5bf08d82fcae4aca1491e652475a
     name: datalyzer
@@ -23,7 +23,7 @@ entries:
     version: 0.0.6
   - apiVersion: v2
     appVersion: 0.0.5
-    created: "2024-08-20T18:02:28.758707-07:00"
+    created: "2024-12-06T15:33:04.61857-05:00"
     description: MyDecisive Datalyzer helm charts
     digest: 554167f21643afd005bba4a75eeb1e7a2a47b5ffaf302194b86caec6daecb2e8
     name: datalyzer
@@ -33,7 +33,7 @@ entries:
     version: 0.0.5
   - apiVersion: v2
     appVersion: 0.0.3
-    created: "2024-06-18T16:40:17.391433-05:00"
+    created: "2024-12-06T15:33:04.618362-05:00"
     description: MyDecisive Datalyzer helm charts
     digest: 738c7cb73efb712cf9992783b6e5273e6f0cde0111b758d181a7e5f2a2bb2b3e
     name: datalyzer
@@ -43,7 +43,7 @@ entries:
     version: 0.0.4
   - apiVersion: v2
     appVersion: 0.0.2
-    created: "2024-06-18T11:23:09.062217-07:00"
+    created: "2024-12-06T15:33:04.618077-05:00"
     description: MyDecisive Datalyzer helm charts
     digest: 9b0b6d3f6c8d9a4f28304611e02cda34dc86b2263227dba49a87c3e6ecb2478e
     name: datalyzer
@@ -53,7 +53,7 @@ entries:
     version: 0.0.3
   - apiVersion: v2
     appVersion: 0.0.1-alpha
-    created: "2024-05-02T19:34:20.059724-07:00"
+    created: "2024-12-06T15:33:04.617796-05:00"
     description: MyDecisive Datalyzer helm charts
     digest: 8b54620d6fc578cc822ff3c8761851052aa8458013e64a99c13c8116da0f26cb
     name: datalyzer
@@ -61,80 +61,10 @@ entries:
     urls:
     - datalyzer-0.0.1.tgz
     version: 0.0.1
-  kube-prometheus-stack:
-  - annotations:
-      artifacthub.io/license: Apache-2.0
-      artifacthub.io/links: |
-        - name: Chart Source
-          url: https://github.com/prometheus-community/helm-charts
-        - name: Upstream Project
-          url: https://github.com/prometheus-operator/kube-prometheus
-      artifacthub.io/operator: "true"
-    apiVersion: v2
-    appVersion: v0.77.1
-    created: "2024-10-30T11:55:26.02881-05:00"
-    dependencies:
-    - condition: crds.enabled
-      name: crds
-      repository: ""
-      version: 0.0.0
-    - condition: kubeStateMetrics.enabled
-      name: kube-state-metrics
-      repository: https://prometheus-community.github.io/helm-charts
-      version: 5.26.*
-    - condition: nodeExporter.enabled
-      name: prometheus-node-exporter
-      repository: https://prometheus-community.github.io/helm-charts
-      version: 4.39.*
-    - condition: grafana.enabled
-      name: grafana
-      repository: https://grafana.github.io/helm-charts
-      version: 8.5.*
-    - condition: windowsMonitoring.enabled
-      name: prometheus-windows-exporter
-      repository: https://prometheus-community.github.io/helm-charts
-      version: 0.7.*
-    description: kube-prometheus-stack collects Kubernetes manifests, Grafana dashboards,
-      and Prometheus rules combined with documentation and scripts to provide easy
-      to operate end-to-end Kubernetes cluster monitoring with Prometheus using the
-      Prometheus Operator.
-    digest: 730145f0a42d4837223c818ab7d73fb48aac8a8ec20b5cc3190cacff9b9a2aa6
-    home: https://github.com/prometheus-operator/kube-prometheus
-    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
-    keywords:
-    - operator
-    - prometheus
-    - kube-prometheus
-    kubeVersion: '>=1.19.0-0'
-    maintainers:
-    - email: andrew@quadcorps.co.uk
-      name: andrewgkew
-    - email: gianrubio@gmail.com
-      name: gianrubio
-    - email: github.gkarthiks@gmail.com
-      name: gkarthiks
-    - email: kube-prometheus-stack@sisti.pt
-      name: GMartinez-Sisti
-    - email: github@jkroepke.de
-      name: jkroepke
-    - email: scott@r6by.com
-      name: scottrigby
-    - email: miroslav.hadzhiev@gmail.com
-      name: Xtigyro
-    - email: quentin.bisson@gmail.com
-      name: QuentinBisson
-    name: kube-prometheus-stack
-    sources:
-    - https://github.com/prometheus-community/helm-charts
-    - https://github.com/prometheus-operator/kube-prometheus
-    type: application
-    urls:
-    - charts/kube-prometheus-stack-65.3.1.tgz
-    version: 65.3.1
   mdai-api:
   - apiVersion: v2
     appVersion: 0.0.3
-    created: "2024-11-12T09:49:10.53892-07:00"
+    created: "2024-12-06T15:33:04.620974-05:00"
     description: MyDecisive API helm charts
     digest: 98320671a55965e33036f8e3b908f5e091f9920639b25b818287626b3075c08a
     name: mdai-api
@@ -144,7 +74,7 @@ entries:
     version: 0.0.6
   - apiVersion: v2
     appVersion: 0.0.2
-    created: "2024-11-05T14:05:23.220886-07:00"
+    created: "2024-12-06T15:33:04.620535-05:00"
     description: MyDecisive API helm charts
     digest: d6ba8f89f8ba16dd75e0c1a9dc08ef29fd94194c32c93b41452f7fcce0df320b
     name: mdai-api
@@ -154,7 +84,7 @@ entries:
     version: 0.0.5
   - apiVersion: v2
     appVersion: 0.0.1-alpha
-    created: "2024-06-21T09:36:41.049308-07:00"
+    created: "2024-12-06T15:33:04.620057-05:00"
     description: MyDecisive API helm charts
     digest: 1b8c09ed13eca6dcdb677617d4b2072f73f37f0c9d3f725cc1213707d3948372
     name: mdai-api
@@ -164,7 +94,7 @@ entries:
     version: 0.0.4
   - apiVersion: v2
     appVersion: 0.0.1-alpha
-    created: "2024-03-07T14:54:14.529969-05:00"
+    created: "2024-12-06T15:33:04.619722-05:00"
     description: MyDecisive API helm charts
     digest: 494e5ab75aacf67b447b907a66e6c7b6a7395e2ae6ecbc3ecb7a3fc1da225981
     name: mdai-api
@@ -175,7 +105,7 @@ entries:
   mdai-cluster:
   - apiVersion: v2
     appVersion: 0.5.0-rc1
-    created: "2024-11-13T17:26:38.473847-06:00"
+    created: "2024-12-06T15:33:04.712903-05:00"
     dependencies:
     - condition: opentelemetry-operator.enabled
       name: opentelemetry-operator
@@ -211,7 +141,7 @@ entries:
     version: 0.5.0-rc1
   - apiVersion: v2
     appVersion: 0.0.5
-    created: "2024-10-30T11:55:26.009557-05:00"
+    created: "2024-12-06T15:33:04.690184-05:00"
     dependencies:
     - condition: opentelemetry-operator.enabled
       name: opentelemetry-operator
@@ -251,7 +181,7 @@ entries:
     version: 0.0.5
   - apiVersion: v2
     appVersion: 0.0.4
-    created: "2024-10-18T13:43:24.544898-05:00"
+    created: "2024-12-06T15:33:04.667412-05:00"
     dependencies:
     - condition: opentelemetry-operator.enabled
       name: opentelemetry-operator
@@ -291,7 +221,7 @@ entries:
     version: 0.0.4
   - apiVersion: v2
     appVersion: 0.0.3
-    created: "2024-10-09T08:07:19.849613-07:00"
+    created: "2024-12-06T15:33:04.657489-05:00"
     dependencies:
     - condition: opentelemetry-operator.enabled
       name: opentelemetry-operator
@@ -331,7 +261,7 @@ entries:
     version: 0.0.3
   - apiVersion: v2
     appVersion: 0.0.2
-    created: "2024-09-10T12:04:21.769943-07:00"
+    created: "2024-12-06T15:33:04.645303-05:00"
     dependencies:
     - condition: opentelemetry-operator.enabled
       name: opentelemetry-operator
@@ -371,7 +301,7 @@ entries:
     version: 0.0.2
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2024-09-09T15:34:06.723337-07:00"
+    created: "2024-12-06T15:33:04.634254-05:00"
     dependencies:
     - condition: opentelemetry-operator.enabled
       name: opentelemetry-operator
@@ -412,7 +342,7 @@ entries:
   mdai-console:
   - apiVersion: v2
     appVersion: 0.2.3
-    created: "2024-07-26T12:23:03.29082-07:00"
+    created: "2024-12-06T15:33:04.716466-05:00"
     description: MyDecisive Engine UI helm charts
     digest: bb0b19eab480e2f17ceeae5bae41e805ab0e7cc154a00e6912eb950c243e8186
     name: mdai-console
@@ -422,7 +352,7 @@ entries:
     version: 0.2.4
   - apiVersion: v2
     appVersion: 0.2.3
-    created: "2024-07-25T15:24:08.075858-07:00"
+    created: "2024-12-06T15:33:04.716182-05:00"
     description: MyDecisive Engine UI helm charts
     digest: 2d013e601bdd484911da9105321e48d6c2ab14ec229559ba6a60176c28c2c6e1
     name: mdai-console
@@ -432,7 +362,7 @@ entries:
     version: 0.2.3
   - apiVersion: v2
     appVersion: 0.2.2
-    created: "2024-07-15T11:01:25.366005-05:00"
+    created: "2024-12-06T15:33:04.71591-05:00"
     description: MyDecisive Engine UI helm charts
     digest: b17f2ef65e911613a038b093803baa1d9c09139d13a991d5695693ee003c4809
     name: mdai-console
@@ -442,7 +372,7 @@ entries:
     version: 0.2.2
   - apiVersion: v2
     appVersion: 0.2.1
-    created: "2024-07-14T15:21:53.569828-05:00"
+    created: "2024-12-06T15:33:04.715601-05:00"
     description: MyDecisive Engine UI helm charts
     digest: fbb5b629b467960617d11c1c3fee42ff54f4069fd4f202dc89fa821e9876883d
     name: mdai-console
@@ -452,7 +382,7 @@ entries:
     version: 0.2.1
   - apiVersion: v2
     appVersion: 0.2.0
-    created: "2024-07-12T17:43:52.091842-05:00"
+    created: "2024-12-06T15:33:04.715154-05:00"
     description: MyDecisive Engine UI helm charts
     digest: 1a23a00c00cad469c678781be7e6787ea3d9996af2aca6ae1718e74716aa645e
     name: mdai-console
@@ -462,7 +392,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2024-06-12T10:22:14.318099-07:00"
+    created: "2024-12-06T15:33:04.714848-05:00"
     description: MyDecisive Engine UI helm charts
     digest: 8d1e7c42bcbbaa4869b40ea970fd9a41dd6513d7e777a28fe4872236e78b5287
     name: mdai-console
@@ -472,7 +402,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2024-06-10T15:12:10.277239-07:00"
+    created: "2024-12-06T15:33:04.714539-05:00"
     description: MyDecisive Engine UI helm charts
     digest: c41703875c2f3b92df9cb3e54f62bafff9ddaed9aa8036a26541796c1cac3fb6
     name: mdai-console
@@ -482,7 +412,7 @@ entries:
     version: 0.1.0
   - apiVersion: v2
     appVersion: 0.0.1-alpha
-    created: "2024-04-01T12:06:11.935322-07:00"
+    created: "2024-12-06T15:33:04.714234-05:00"
     description: MyDecisive Engine UI helm charts
     digest: 5f035da0c61c0dfcebfd68f9344da0819e07b56f380bef3bee7a8e7420623c07
     name: mdai-console
@@ -492,7 +422,7 @@ entries:
     version: 0.0.7
   - apiVersion: v2
     appVersion: 0.0.1-alpha
-    created: "2024-05-03T08:54:12.546955-07:00"
+    created: "2024-12-06T15:33:04.713927-05:00"
     description: MyDecisive Engine UI helm charts
     digest: 1eeff61ece4b12034258254947044e7f507987241ff011a8d190cb58eb93e616
     name: mdai-console
@@ -502,7 +432,7 @@ entries:
     version: 0.0.7-nonroot
   - apiVersion: v2
     appVersion: 0.0.1-alpha
-    created: "2024-03-07T14:54:14.530789-05:00"
+    created: "2024-12-06T15:33:04.71363-05:00"
     description: MyDecisive Engine UI helm charts
     digest: 6b0684384b655e535f44b4cf3366acbbe30f7d565a3fc9f512790045bca1c18d
     name: mdai-console
@@ -512,7 +442,7 @@ entries:
     version: 0.0.6
   - apiVersion: v2
     appVersion: 0.0.1-alpha
-    created: "2024-03-07T14:54:14.530403-05:00"
+    created: "2024-12-06T15:33:04.713307-05:00"
     description: MyDecisive Engine UI helm charts
     digest: 0f1c9dca2ee6e67eb8b924c4c54ce4c9cb34a410902ce6b82e878e9605bbbb5a
     name: mdai-console
@@ -520,41 +450,10 @@ entries:
     urls:
     - mdai-console-0.0.6-cognito.tgz
     version: 0.0.6-cognito
-  metrics-server:
-  - annotations:
-      artifacthub.io/changes: |
-        - kind: changed
-          description: "Updated the _Metrics Server_ OCI image to [v0.7.1](https://github.com/kubernetes-sigs/metrics-server/releases/tag/v0.7.1)."
-    apiVersion: v2
-    appVersion: 0.7.1
-    created: "2024-10-30T11:55:26.030461-05:00"
-    description: Metrics Server is a scalable, efficient source of container resource
-      metrics for Kubernetes built-in autoscaling pipelines.
-    digest: bed08344ab4b070db463ad63c5effb2ad23a158090ffdb2c1a960895110ee12e
-    home: https://github.com/kubernetes-sigs/metrics-server
-    icon: https://avatars.githubusercontent.com/u/36015203?s=400&v=4
-    keywords:
-    - kubernetes
-    - metrics-server
-    - metrics
-    maintainers:
-    - name: stevehipwell
-      url: https://github.com/stevehipwell
-    - name: krmichel
-      url: https://github.com/krmichel
-    - name: endrec
-      url: https://github.com/endrec
-    name: metrics-server
-    sources:
-    - https://github.com/kubernetes-sigs/metrics-server
-    type: application
-    urls:
-    - charts/metrics-server-3.12.1.tgz
-    version: 3.12.1
   mydecisive-api:
   - apiVersion: v2
     appVersion: 0.0.1-alpha
-    created: "2024-03-07T14:54:14.531865-05:00"
+    created: "2024-12-06T15:33:04.71753-05:00"
     description: MyDecisive API helm charts
     digest: 130334f14c8720cd3bc4fb838f0362b9e071e5d4dfb1b7bf4600558d97307623
     name: mydecisive-api
@@ -564,7 +463,7 @@ entries:
     version: 0.0.3
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-03-07T14:54:14.531478-05:00"
+    created: "2024-12-06T15:33:04.717105-05:00"
     description: MyDecisive API helm charts
     digest: 6d35713bb79edef272da5420548476ec33874e5d4707d15eaef02bab98c961f9
     name: mydecisive-api
@@ -574,7 +473,7 @@ entries:
     version: 0.0.2
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-03-07T14:54:14.531142-05:00"
+    created: "2024-12-06T15:33:04.716702-05:00"
     description: MyDecisive API helm charts
     digest: 9109eaa72fa1ce8ee42ff7a9b0081aeafa2c97654bc8dba13925a9d388ad851c
     name: mydecisive-api
@@ -584,8 +483,18 @@ entries:
     version: 0.0.1
   mydecisive-engine-operator:
   - apiVersion: v2
+    appVersion: 0.1.2
+    created: "2024-12-06T15:33:04.73876-05:00"
+    description: MyDecisive Operator Helm Chart
+    digest: 373fb75ff55b78e11d6742b70b520087c97955bba242f13b070d8d247e6992d7
+    name: mydecisive-engine-operator
+    type: application
+    urls:
+    - mydecisive-engine-operator-0.0.20.tgz
+    version: 0.0.20
+  - apiVersion: v2
     appVersion: 0.0.12
-    created: "2024-11-08T16:46:19.869523-07:00"
+    created: "2024-12-06T15:33:04.734536-05:00"
     description: MyDecisive Operator Helm Chart
     digest: 8d975c98fd2a48130c6be459bd9a177b5c625d8c399ce4cfaa6ca43fc761f032
     name: mydecisive-engine-operator
@@ -595,7 +504,7 @@ entries:
     version: 0.0.17
   - apiVersion: v2
     appVersion: 0.0.11
-    created: "2024-11-04T18:35:07.816339-06:00"
+    created: "2024-12-06T15:33:04.732817-05:00"
     description: MyDecisive Operator Helm Chart
     digest: f55b3ee59b764b80fde1a228ee3da8bee5db13e12ac2368cc5eb69f15cd71088
     name: mydecisive-engine-operator
@@ -605,7 +514,7 @@ entries:
     version: 0.0.16
   - apiVersion: v2
     appVersion: 0.0.10
-    created: "2024-11-04T18:35:07.813569-06:00"
+    created: "2024-12-06T15:33:04.730898-05:00"
     description: MyDecisive Operator Helm Chart
     digest: c9591743b1a33a4a035a645cad39dc818c99cce69c7be0454032525bd33c33d3
     name: mydecisive-engine-operator
@@ -615,7 +524,7 @@ entries:
     version: 0.0.15
   - apiVersion: v2
     appVersion: 0.0.9
-    created: "2024-10-30T08:50:40.111785-07:00"
+    created: "2024-12-06T15:33:04.729133-05:00"
     description: MyDecisive Operator Helm Chart
     digest: 9b2e76f09ce4720cd75ba42a8d5b08a2037b01252cf67568b44ba55db699cb08
     name: mydecisive-engine-operator
@@ -625,7 +534,7 @@ entries:
     version: 0.0.14
   - apiVersion: v2
     appVersion: 0.0.9
-    created: "2024-10-28T14:08:58.099195-04:00"
+    created: "2024-12-06T15:33:04.726832-05:00"
     description: MyDecisive Operator Helm Chart
     digest: 23a85795e918f46c3efd21c135f67bbf3cd97188c8708b779264ea10f80cd1dd
     name: mydecisive-engine-operator
@@ -635,7 +544,7 @@ entries:
     version: 0.0.13
   - apiVersion: v2
     appVersion: 0.0.8
-    created: "2024-10-15T16:04:07.705314-05:00"
+    created: "2024-12-06T15:33:04.724834-05:00"
     description: MyDecisive Operator Helm Chart
     digest: cd7fa3018a59febdc083d7d40eeded4ab1c24f9fb6355f7071d72fd322d8ed32
     name: mydecisive-engine-operator
@@ -645,7 +554,7 @@ entries:
     version: 0.0.12
   - apiVersion: v2
     appVersion: 0.0.7
-    created: "2024-10-01T10:18:43.748813-07:00"
+    created: "2024-12-06T15:33:04.723141-05:00"
     description: MyDecisive Operator Helm Chart
     digest: 43d00cb5dfeb0d249104423560add9250b6bcc7d173d1a85a7c1c40162166401
     name: mydecisive-engine-operator
@@ -655,7 +564,7 @@ entries:
     version: 0.0.11
   - apiVersion: v2
     appVersion: 0.0.6
-    created: "2024-09-04T11:36:44.728573-07:00"
+    created: "2024-12-06T15:33:04.721531-05:00"
     description: MyDecisive Operator Helm Chart
     digest: 4209079b749a3fc5f5ca4288091ad429ff66361aabaa3a4507d6e9063ba3a375
     name: mydecisive-engine-operator
@@ -665,7 +574,7 @@ entries:
     version: 0.0.10
   - apiVersion: v2
     appVersion: 0.0.6
-    created: "2024-08-22T15:16:24.17572-07:00"
+    created: "2024-12-06T15:33:04.750568-05:00"
     description: MyDecisive Operator Helm Chart
     digest: d9b8cd1c0eef88200d43472ac36da8d919fb9b77f362926f5f4afa98f0b32047
     name: mydecisive-engine-operator
@@ -675,7 +584,7 @@ entries:
     version: 0.0.9
   - apiVersion: v2
     appVersion: 0.0.5
-    created: "2024-07-15T10:06:12.825878-07:00"
+    created: "2024-12-06T15:33:04.748932-05:00"
     description: MyDecisive Operator Helm Chart
     digest: b0e55cdcfd32b56ee66a186ad1d49aa0261a605a69cb2cffc7935f542cd93c2f
     name: mydecisive-engine-operator
@@ -685,7 +594,7 @@ entries:
     version: 0.0.8
   - apiVersion: v2
     appVersion: 0.0.5
-    created: "2024-07-12T12:48:57.846292-07:00"
+    created: "2024-12-06T15:33:04.747356-05:00"
     description: MyDecisive Operator Helm Chart
     digest: 8bf07a2d36d2cbb9410e1324d578b4465f8ff10d03219eeed1e8dde34dabf58c
     name: mydecisive-engine-operator
@@ -695,7 +604,7 @@ entries:
     version: 0.0.7
   - apiVersion: v2
     appVersion: 0.0.4
-    created: "2024-07-10T14:35:12.709154-07:00"
+    created: "2024-12-06T15:33:04.745652-05:00"
     description: MyDecisive Operator Helm Chart
     digest: f8b4e78d25640f5dce0cc1115618a63e3b3357e3362b31b838a67338036ae859
     name: mydecisive-engine-operator
@@ -705,7 +614,7 @@ entries:
     version: 0.0.6
   - apiVersion: v2
     appVersion: 0.0.4
-    created: "2024-07-09T13:55:16.081672-05:00"
+    created: "2024-12-06T15:33:04.744069-05:00"
     description: MyDecisive Operator Helm Chart
     digest: 69e058da77f60cc1cb3e0ade2801ce55ea5966408f2bbc58ac2b3143fe238c10
     name: mydecisive-engine-operator
@@ -715,7 +624,7 @@ entries:
     version: 0.0.5
   - apiVersion: v2
     appVersion: 0.0.3
-    created: "2024-07-08T15:52:25.637697-07:00"
+    created: "2024-12-06T15:33:04.742378-05:00"
     description: MyDecisive Operator Helm Chart
     digest: 62d2be1659e327d88543c81ea2c3c5536c2270fa9e7d78606b8c595e98f2ac20
     name: mydecisive-engine-operator
@@ -725,7 +634,7 @@ entries:
     version: 0.0.4
   - apiVersion: v2
     appVersion: 0.0.2
-    created: "2024-06-20T16:48:08.028749-05:00"
+    created: "2024-12-06T15:33:04.740611-05:00"
     description: MyDecisive Operator Helm Chart
     digest: 67d391b2f82255daef5d61ed081b60c09eedf7075c72294387bd5bd20c42f0a6
     name: mydecisive-engine-operator
@@ -735,7 +644,7 @@ entries:
     version: 0.0.3
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2024-06-18T11:43:00.133386-07:00"
+    created: "2024-12-06T15:33:04.736517-05:00"
     description: MyDecisive Operator Helm Chart
     digest: 343d81deb67349970b0b16e8937c07b78b88f7eb8bc6e78268d8d8e3a2d170d7
     name: mydecisive-engine-operator
@@ -745,7 +654,7 @@ entries:
     version: 0.0.2
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2024-06-11T09:47:12.339813-07:00"
+    created: "2024-12-06T15:33:04.71916-05:00"
     description: MyDecisive Operator Helm Chart
     digest: 68b34f62104b67d0b56de7ae9541a2cdb66ed4201b6f9a5073f72f712670501a
     name: mydecisive-engine-operator
@@ -756,7 +665,7 @@ entries:
   mydecisive-engine-ui:
   - apiVersion: v2
     appVersion: 0.0.1-alpha
-    created: "2024-03-07T14:54:14.533822-05:00"
+    created: "2024-12-06T15:33:04.75299-05:00"
     description: MyDecisive Engine UI helm charts
     digest: 78dd42ab4ea50b0c554414b673fb719782bfdb7d6d0c4f4c63f89682df73970e
     name: mydecisive-engine-ui
@@ -766,7 +675,7 @@ entries:
     version: 0.0.6
   - apiVersion: v2
     appVersion: 0.0.1-alpha
-    created: "2024-03-07T14:54:14.533528-05:00"
+    created: "2024-12-06T15:33:04.752611-05:00"
     description: MyDecisive Engine UI helm charts
     digest: 6daf96e5e76d298b3734b319a8a030b3a509367631fb298f67950d172dfc4f15
     name: mydecisive-engine-ui
@@ -776,7 +685,7 @@ entries:
     version: 0.0.6-cognito
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-03-07T14:54:14.533143-05:00"
+    created: "2024-12-06T15:33:04.752347-05:00"
     description: MyDecisive Engine UI helm charts
     digest: 5ffbb61fcafde50d027b0202fa864d3f8cd07048d73480d4fbf1599c32b276f4
     name: mydecisive-engine-ui
@@ -786,7 +695,7 @@ entries:
     version: 0.0.5
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-03-07T14:54:14.532864-05:00"
+    created: "2024-12-06T15:33:04.75172-05:00"
     description: MyDecisive Engine UI helm charts
     digest: e964561c565befd3512e68e6673fa0d8981e3e919f5149f87ec4238cdc2ef1ca
     name: mydecisive-engine-ui
@@ -796,7 +705,7 @@ entries:
     version: 0.0.4
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-03-07T14:54:14.53263-05:00"
+    created: "2024-12-06T15:33:04.751478-05:00"
     description: MyDecisive Engine UI helm charts
     digest: eed2b4290ec060fb25a0d5ece839467694a1d2e49d4ed6fb36efd4d162ef708a
     name: mydecisive-engine-ui
@@ -806,7 +715,7 @@ entries:
     version: 0.0.3
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-03-07T14:54:14.532387-05:00"
+    created: "2024-12-06T15:33:04.751221-05:00"
     description: MyDecisive Engine UI helm charts
     digest: 62756933761cec232974f94dcd33f367761ccd86799f8d8613ac82bbe98ab01b
     name: mydecisive-engine-ui
@@ -816,7 +725,7 @@ entries:
     version: 0.0.2
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-03-07T14:54:14.532135-05:00"
+    created: "2024-12-06T15:33:04.750975-05:00"
     description: MyDecisive Engine UI helm charts
     digest: effbbc6933a257139f5005b07a6d99d75893e06692d364a3dd33732cfdb36718
     name: mydecisive-engine-ui
@@ -827,7 +736,7 @@ entries:
   opentelemetry-demo:
   - apiVersion: v2
     appVersion: 1.5.0
-    created: "2024-03-07T14:54:14.627007-05:00"
+    created: "2024-12-06T15:33:04.8417-05:00"
     dependencies:
     - condition: opentelemetry-collector.enabled
       name: opentelemetry-collector
@@ -874,7 +783,7 @@ entries:
     version: 0.25.4
   - apiVersion: v2
     appVersion: 1.5.0
-    created: "2024-03-07T14:54:14.604289-05:00"
+    created: "2024-12-06T15:33:04.819559-05:00"
     dependencies:
     - condition: opentelemetry-collector.enabled
       name: opentelemetry-collector
@@ -921,7 +830,7 @@ entries:
     version: 0.25.3
   - apiVersion: v2
     appVersion: 1.5.0
-    created: "2024-03-07T14:54:14.581379-05:00"
+    created: "2024-12-06T15:33:04.797247-05:00"
     dependencies:
     - condition: opentelemetry-collector.enabled
       name: opentelemetry-collector
@@ -968,7 +877,7 @@ entries:
     version: 0.25.2
   - apiVersion: v2
     appVersion: 1.5.0
-    created: "2024-03-07T14:54:14.557565-05:00"
+    created: "2024-12-06T15:33:04.775561-05:00"
     dependencies:
     - condition: opentelemetry-collector.enabled
       name: opentelemetry-collector
@@ -1015,27 +924,8 @@ entries:
     version: 0.25.1
   opentelemetry-operator:
   - apiVersion: v2
-    appVersion: 0.110.0
-    created: "2024-10-30T11:55:26.034913-05:00"
-    description: OpenTelemetry Operator Helm chart for Kubernetes
-    digest: 0503fb1c2a3c5a6656a5e924e425377e738139c633609d065519042b0203e02b
-    home: https://opentelemetry.io/
-    icon: https://raw.githubusercontent.com/cncf/artwork/a718fa97fffec1b9fd14147682e9e3ac0c8817cb/projects/opentelemetry/icon/color/opentelemetry-icon-color.png
-    maintainers:
-    - name: Allex1
-    - name: dmitryax
-    - name: jaronoff97
-    - name: TylerHelmuth
-    name: opentelemetry-operator
-    sources:
-    - https://github.com/open-telemetry/opentelemetry-operator
-    type: application
-    urls:
-    - charts/opentelemetry-operator-0.71.2.tgz
-    version: 0.71.2
-  - apiVersion: v2
     appVersion: 0.89.0
-    created: "2024-03-07T14:54:14.629633-05:00"
+    created: "2024-12-06T15:33:04.844251-05:00"
     description: OpenTelemetry Operator Helm chart for Kubernetes
     digest: f1db84b08dbdd211ed713e45d2fbc0a7b59bd1c363c0efb40c1e17d8d9d2d60f
     home: https://opentelemetry.io/
@@ -1054,7 +944,7 @@ entries:
   otelcol-sample:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-03-07T14:54:14.630327-05:00"
+    created: "2024-12-06T15:33:04.844726-05:00"
     description: A Helm chart for Kubernetes
     digest: c8d0b9023997812260dc2e6621cb65a5370396cd442f3aaf4194b1d25da074e1
     name: otelcol-sample
@@ -1064,7 +954,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-03-07T14:54:14.630005-05:00"
+    created: "2024-12-06T15:33:04.844503-05:00"
     description: A Helm chart for Kubernetes
     digest: 30fc6951b1cb154a07955533f6309e85fb3e737b1a24445895218057fa4dc3f6
     name: otelcol-sample
@@ -1072,4 +962,4 @@ entries:
     urls:
     - otelcol-sample-0.1.0.tgz
     version: 0.1.0
-generated: "2024-11-13T17:26:38.446434-06:00"
+generated: "2024-12-06T15:33:04.616378-05:00"
