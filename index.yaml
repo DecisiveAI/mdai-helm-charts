@@ -473,6 +473,16 @@ entries:
     version: 0.0.6-cognito
   mdai-operator:
   - apiVersion: v2
+    appVersion: 0.1.2
+    created: "2025-02-03T11:23:59.259562-07:00"
+    description: MDAI Operator Helm Chart
+    digest: e337a8cfdb5b69f41a548aa39efaf1cf6b0372db4958db05cde52943a11ffe0d
+    name: mdai-operator
+    type: application
+    urls:
+    - mdai-operator-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
     appVersion: 0.1.1
     created: "2025-01-30T13:59:27.398602-07:00"
     description: MDAI Operator Helm Chart
@@ -1004,4 +1014,4 @@ entries:
     urls:
     - otelcol-sample-0.1.0.tgz
     version: 0.1.0
-generated: "2025-01-30T15:19:58.873488-07:00"
+generated: "2025-02-03T11:23:59.258647-07:00"
