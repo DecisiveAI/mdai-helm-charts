@@ -63,6 +63,16 @@ entries:
     version: 0.0.1
   event-handler-webservice:
   - apiVersion: v2
+    appVersion: 0.0.5
+    created: "2025-02-19T17:44:50.144652-06:00"
+    description: MyDecisive Event Handler Webservice helm charts
+    digest: 9e93922d920a62e0f97c850a27aa2192d9464d11668817e89b862d4ca1b495f0
+    name: event-handler-webservice
+    type: application
+    urls:
+    - event-handler-webservice-0.0.5.tgz
+    version: 0.0.5
+  - apiVersion: v2
     appVersion: 0.0.3
     created: "2025-02-03T12:23:44.738722-06:00"
     description: MyDecisive Event Handler Webservice helm charts
@@ -482,6 +492,16 @@ entries:
     - mdai-console-0.0.6-cognito.tgz
     version: 0.0.6-cognito
   mdai-operator:
+  - apiVersion: v2
+    appVersion: 0.1.4
+    created: "2025-02-20T15:17:07.411819-06:00"
+    description: MDAI Operator Helm Chart
+    digest: c09d49c1be6f7dd20f2399d260537103d675d4038057a8823efb355df94a8b84
+    name: mdai-operator
+    type: application
+    urls:
+    - mdai-operator-0.1.4.tgz
+    version: 0.1.4
   - apiVersion: v2
     appVersion: 0.1.3
     created: "2025-02-07T09:22:32.952894-07:00"
@@ -1044,4 +1064,4 @@ entries:
     urls:
     - otelcol-sample-0.1.0.tgz
     version: 0.1.0
-generated: "2025-02-07T15:57:35.874884-06:00"
+generated: "2025-02-20T15:17:07.411175-06:00"
