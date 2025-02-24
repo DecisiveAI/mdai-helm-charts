@@ -145,6 +145,16 @@ entries:
     version: 0.0.3
   mdai-cluster:
   - apiVersion: v2
+    appVersion: 0.6.0
+    created: "2025-02-14T16:27:35.850778-07:00"
+    description: MDAI Cluster helm chart
+    digest: d180f7ce177427a005f0ec7b7eee2851e20691b495d98fe2b194fe9777b0b4cb
+    name: mdai-cluster
+    type: application
+    urls:
+    - mdai-cluster-0.6.0.tgz
+    version: 0.6.0
+  - apiVersion: v2
     appVersion: 0.5.0-rc1
     created: "2024-12-06T15:33:04.712903-05:00"
     dependencies:
