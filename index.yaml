@@ -511,6 +511,47 @@ entries:
     urls:
     - mdai-console-0.0.6-cognito.tgz
     version: 0.0.6-cognito
+  mdai-hub:
+  - apiVersion: v2
+    appVersion: 0.6.1
+    created: "2025-03-05T15:04:47.715337-07:00"
+    dependencies:
+    - condition: opentelemetry-operator.enabled
+      name: opentelemetry-operator
+      repository: https://open-telemetry.github.io/opentelemetry-helm-charts
+      version: ~0.71.2
+    - alias: kubeprometheusstack
+      condition: kubeprometheusstack.enabled
+      name: kube-prometheus-stack
+      repository: https://prometheus-community.github.io/helm-charts
+      version: ~65.3.1
+    - condition: metrics-server.enabled
+      name: metrics-server
+      repository: https://kubernetes-sigs.github.io/metrics-server
+      version: ~3.12.1
+    - condition: datalyzer.enabled
+      name: datalyzer
+      repository: https://decisiveai.github.io/mdai-helm-charts
+      version: 0.0.8
+    - condition: mdai-operator.enabled
+      name: mdai-operator
+      repository: https://decisiveai.github.io/mdai-helm-charts
+      version: 0.1.5
+    - condition: event-handler-webservice.enabled
+      name: event-handler-webservice
+      repository: https://decisiveai.github.io/mdai-helm-charts
+      version: 0.0.5
+    - condition: valkey.enabled
+      name: valkey
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: ~2.2.0
+    description: MDAI Hub helm chart
+    digest: cd860674c6243397c0433b7c76a33a3b7e366fff893141d040ed22655d6740a9
+    name: mdai-hub
+    type: application
+    urls:
+    - mdai-hub-0.6.1.tgz
+    version: 0.6.1
   mdai-operator:
   - apiVersion: v2
     appVersion: 0.1.7
