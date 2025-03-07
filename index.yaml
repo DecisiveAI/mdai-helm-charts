@@ -63,6 +63,16 @@ entries:
     version: 0.0.1
   event-handler-webservice:
   - apiVersion: v2
+    appVersion: 0.0.6
+    created: "2025-03-07T10:59:04.912543-07:00"
+    description: MyDecisive Event Handler Webservice helm charts
+    digest: 321fbeaff0c0a77215f7206252790e8be72edeac9faaa8638e60e2c921fe99f7
+    name: event-handler-webservice
+    type: application
+    urls:
+    - event-handler-webservice-0.0.6.tgz
+    version: 0.0.6
+  - apiVersion: v2
     appVersion: 0.0.5
     created: "2025-02-19T17:44:50.144652-06:00"
     description: MyDecisive Event Handler Webservice helm charts
@@ -1104,4 +1114,4 @@ entries:
     urls:
     - otelcol-sample-0.1.0.tgz
     version: 0.1.0
-generated: "2025-03-06T14:21:07.630217-06:00"
+generated: "2025-03-07T10:59:04.910206-07:00"
