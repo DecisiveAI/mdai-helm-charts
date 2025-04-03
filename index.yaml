@@ -523,6 +523,42 @@ entries:
     version: 0.0.6-cognito
   mdai-hub:
   - apiVersion: v2
+    appVersion: 0.7.1-rc2
+    created: "2025-04-03T15:39:38.037218-07:00"
+    dependencies:
+    - condition: opentelemetry-operator.enabled
+      name: opentelemetry-operator
+      repository: https://open-telemetry.github.io/opentelemetry-helm-charts
+      version: ~0.71.2
+    - alias: kubeprometheusstack
+      condition: kubeprometheusstack.enabled
+      name: kube-prometheus-stack
+      repository: https://prometheus-community.github.io/helm-charts
+      version: ~65.3.1
+    - condition: metrics-server.enabled
+      name: metrics-server
+      repository: https://kubernetes-sigs.github.io/metrics-server
+      version: ~3.12.1
+    - condition: mdai-operator.enabled
+      name: mdai-operator
+      repository: https://decisiveai.github.io/mdai-helm-charts
+      version: 0.1.9
+    - condition: event-handler-webservice.enabled
+      name: event-handler-webservice
+      repository: https://decisiveai.github.io/mdai-helm-charts
+      version: 0.0.7
+    - condition: valkey.enabled
+      name: valkey
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: ~2.2.0
+    description: MDAI Hub helm chart
+    digest: 405dc59351e9c92a24fcdc5363f69534ffcb0819ef22140b57c9764583029c30
+    name: mdai-hub
+    type: application
+    urls:
+    - mdai-hub-0.7.1-rc2.tgz
+    version: 0.7.1-rc2
+  - apiVersion: v2
     appVersion: 0.7.1-rc1
     created: "2025-03-25T09:08:08.978464-07:00"
     dependencies:
@@ -1253,4 +1289,4 @@ entries:
     urls:
     - otelcol-sample-0.1.0.tgz
     version: 0.1.0
-generated: "2025-04-03T12:03:55.240901-07:00"
+generated: "2025-04-03T15:39:38.008924-07:00"
