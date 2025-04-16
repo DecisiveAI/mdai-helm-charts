@@ -63,6 +63,16 @@ entries:
     version: 0.0.1
   event-handler-webservice:
   - apiVersion: v2
+    appVersion: 0.0.8
+    created: "2025-04-16T17:21:22.715119-05:00"
+    description: MyDecisive Event Handler Webservice helm charts
+    digest: 8916a053d9408100d77a02a49aa9ad2701a9589975a38e338a4e601267fc4187
+    name: event-handler-webservice
+    type: application
+    urls:
+    - event-handler-webservice-0.0.8.tgz
+    version: 0.0.8
+  - apiVersion: v2
     appVersion: 0.0.7
     created: "2025-04-03T12:03:55.241646-07:00"
     description: MyDecisive Event Handler Webservice helm charts
