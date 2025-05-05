@@ -687,6 +687,7 @@ entries:
     urls:
     - mdai-operator-0.1.13.tgz
     version: 0.1.13
+  - apiVersion: v2
     appVersion: 0.1.12
     created: "2025-05-05T13:06:22.131167-05:00"
     description: MDAI Operator Helm Chart
