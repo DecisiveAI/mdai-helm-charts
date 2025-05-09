@@ -678,6 +678,16 @@ entries:
     version: 0.7.0-rc1
   mdai-operator:
   - apiVersion: v2
+    appVersion: 0.1.14
+    created: "2025-05-09T10:19:36.057086-04:00"
+    description: MDAI Operator Helm Chart
+    digest: 6d0acfe71d0604268c6560adf5ec816dc667036a20a025bd67239becd7bdd7d1
+    name: mdai-operator
+    type: application
+    urls:
+    - mdai-operator-0.1.14.tgz
+    version: 0.1.14
+  - apiVersion: v2
     appVersion: 0.1.13
     created: "2025-05-05T13:07:29.427183-05:00"
     description: MDAI Operator Helm Chart
@@ -697,6 +707,16 @@ entries:
     urls:
     - mdai-operator-0.1.12.tgz
     version: 0.1.12
+  - apiVersion: v2
+    appVersion: 0.1.11
+    created: "2025-05-09T10:19:36.056433-04:00"
+    description: MDAI Operator Helm Chart
+    digest: 992579b2684b01cc7f93ddb4937792efe166a0aeefc186c4d5861a13b9f385bc
+    name: mdai-operator
+    type: application
+    urls:
+    - mdai-operator-0.1.11.tgz
+    version: 0.1.11
   - apiVersion: v2
     appVersion: 0.1.10
     created: "2025-04-16T17:22:35.841751-05:00"
@@ -1329,4 +1349,4 @@ entries:
     urls:
     - otelcol-sample-0.1.0.tgz
     version: 0.1.0
-generated: "2025-05-05T13:07:29.425399-05:00"
+generated: "2025-05-09T10:19:36.055443-04:00"
