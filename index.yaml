@@ -688,6 +688,16 @@ entries:
     version: 0.7.0-rc1
   mdai-operator:
   - apiVersion: v2
+    appVersion: 0.1.14
+    created: "2025-05-09T10:19:36.057086-04:00"
+    description: MDAI Operator Helm Chart
+    digest: 6d0acfe71d0604268c6560adf5ec816dc667036a20a025bd67239becd7bdd7d1
+    name: mdai-operator
+    type: application
+    urls:
+    - mdai-operator-0.1.14.tgz
+    version: 0.1.14
+  - apiVersion: v2
     appVersion: 0.1.13
     created: "2025-05-05T13:07:29.427183-05:00"
     description: MDAI Operator Helm Chart
