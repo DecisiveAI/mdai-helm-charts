@@ -162,6 +162,17 @@ entries:
     urls:
     - event-handler-webservice-0.0.1.tgz
     version: 0.0.1
+  event-hub-poc:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2025-05-28T09:22:06.951765-07:00"
+    description: MyDecisive Event Hub POC helm charts
+    digest: d4c4586a7c2561a5a0b2cf513665740bba3b9a7bc4c2d9a6e6c77658cd099ab2
+    name: event-hub-poc
+    type: application
+    urls:
+    - event-hub-poc-0.0.1.tgz
+    version: 0.0.1
   mdai-api:
   - apiVersion: v2
     appVersion: 0.0.3
@@ -1419,4 +1430,4 @@ entries:
     urls:
     - otelcol-sample-0.1.0.tgz
     version: 0.1.0
-generated: "2025-05-27T17:30:34.366571-05:00"
+generated: "2025-05-28T09:22:06.951344-07:00"
