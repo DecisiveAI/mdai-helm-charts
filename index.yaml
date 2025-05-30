@@ -583,6 +583,17 @@ entries:
     urls:
     - mdai-event-hub-0.0.1.tgz
     version: 0.0.1
+  mdai-gateway:
+  - apiVersion: v2
+    appVersion: 0.0.12
+    created: "2025-05-30T14:28:29.476983-04:00"
+    description: MyDecisive Event Handler Webservice helm charts
+    digest: 68701ca10ea72ab3959095eaa3f3a5756bb5f1aae2d245752b6ed1fc294d2d7a
+    name: mdai-gateway
+    type: application
+    urls:
+    - mdai-gateway-0.0.12.tgz
+    version: 0.0.12
   mdai-hub:
   - apiVersion: v2
     appVersion: 0.7.1-rc2
@@ -1452,4 +1463,4 @@ entries:
     urls:
     - otelcol-sample-0.1.0.tgz
     version: 0.1.0
-generated: "2025-05-29T19:48:49.935308-04:00"
+generated: "2025-05-30T14:28:29.476374-04:00"
