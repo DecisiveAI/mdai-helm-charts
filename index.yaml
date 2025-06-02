@@ -1000,6 +1000,16 @@ entries:
     version: 0.1.0
   mdai-s3-logs-reader:
   - apiVersion: v2
+    appVersion: 0.0.3
+    created: "2025-06-02T17:39:20.979023-05:00"
+    description: MyDecisive S3 Logs Reader helm charts
+    digest: 94009732f4ff065cad7b5676c1c0e5478fb5dedaae5710f9bb4b9311e0703b7d
+    name: mdai-s3-logs-reader
+    type: application
+    urls:
+    - mdai-s3-logs-reader-0.0.3.tgz
+    version: 0.0.3
+  - apiVersion: v2
     appVersion: 0.0.2
     created: "2025-05-28T17:25:59.99363-05:00"
     description: MyDecisive S3 Logs Reader helm charts
@@ -1531,4 +1541,4 @@ entries:
     urls:
     - otelcol-sample-0.1.0.tgz
     version: 0.1.0
-generated: "2025-06-02T13:15:39.606565-07:00"
+generated: "2025-06-02T17:39:20.978864-05:00"
