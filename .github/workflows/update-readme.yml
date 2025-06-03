@@ -1,0 +1,46 @@
+name: Update README Chart Table
+
+on:
+  push:
+    branches:
+      - gh-pages
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout default branch (main)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Install yq
+        run: |
+          curl -sL https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -o /usr/local/bin/yq
+          chmod +x /usr/local/bin/yq
+
+      - name: Generate Chart Table
+        run: |
+          ./scripts/generate_chart_table.sh gh-pages/index.yaml > chart-table.md
+
+      - name: Insert Chart Table into README.md
+        run: |
+          sed -i '/<!-- charts-start -->/,/<!-- charts-end -->/{
+            /<!-- charts-start -->/!{/<!-- charts-end -->/!d}
+            /<!-- charts-start -->/r chart-table.md
+          }' README.md
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add README.md
+          git commit -m "chore(docs): update chart table in README.md [skip ci]" || echo "No changes"
+          git push
