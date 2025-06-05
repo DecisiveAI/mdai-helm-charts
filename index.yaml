@@ -647,7 +647,7 @@ entries:
   mdai-hub:
   - apiVersion: v2
     appVersion: 0.8.0-dev
-    created: "2025-05-30T17:36:44.587579-05:00"
+    created: "2025-06-05T16:43:24.81894-05:00"
     dependencies:
     - condition: rabbitmq.enabled
       name: rabbitmq
@@ -677,17 +677,17 @@ entries:
     - condition: mdai-gateway.enabled
       name: mdai-gateway
       repository: https://decisiveai.github.io/mdai-helm-charts
-      version: 0.0.12
+      version: 0.0.14
     - condition: mdai-event-hub.enabled
       name: mdai-event-hub
       repository: https://decisiveai.github.io/mdai-helm-charts
-      version: 0.0.1
+      version: 0.0.6
     - condition: mdai-s3-logs-reader.enabled
       name: mdai-s3-logs-reader
       repository: https://decisiveai.github.io/mdai-helm-charts
-      version: 0.0.2
+      version: 0.0.3
     description: MDAI Hub helm chart
-    digest: 746c9d15f9e743d546142805d0f11806f770b9f06c222c5527a009be1639a925
+    digest: b81b9e5186071dbacbdec5fd233e51ec8261cb07cfa1edc49081945e4a32e55c
     name: mdai-hub
     type: application
     urls:
@@ -1571,4 +1571,4 @@ entries:
     urls:
     - otelcol-sample-0.1.0.tgz
     version: 0.1.0
-generated: "2025-06-05T13:24:12.725274-04:00"
+generated: "2025-06-05T16:43:24.793434-05:00"
