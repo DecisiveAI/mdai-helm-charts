@@ -574,6 +574,16 @@ entries:
     version: 0.0.6-cognito
   mdai-event-hub:
   - apiVersion: v2
+    appVersion: 0.0.6
+    created: "2025-06-05T13:11:54.654884-04:00"
+    description: MyDecisive Event Hub helm charts
+    digest: ff14334698798fbb2645f8393ec2f3d1cd713a967ef819ad61a232c681102e9c
+    name: mdai-event-hub
+    type: application
+    urls:
+    - mdai-event-hub-0.0.6.tgz
+    version: 0.0.6
+  - apiVersion: v2
     appVersion: 0.0.5
     created: "2025-06-05T09:50:52.567902-07:00"
     description: MyDecisive Event Hub helm charts
