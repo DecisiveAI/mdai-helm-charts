@@ -8,18 +8,11 @@ on:
 jobs:
   update-readme:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout default branch (main)
-        uses: actions/checkout@v4
-        with:
-          ref: main
-
       - name: Checkout gh-pages branch
         uses: actions/checkout@v4
         with:
           ref: gh-pages
-          path: gh-pages
 
       - name: Install yq
         run: |
@@ -28,7 +21,7 @@ jobs:
 
       - name: Generate Chart Table
         run: |
-          .github/scripts/generate_chart_table.sh gh-pages/index.yaml > chart-table.md
+          bash .github/scripts/generate_chart_table.sh gh-pages/index.yaml > chart-table.md
 
       - name: Insert Chart Table into README.md
         run: |

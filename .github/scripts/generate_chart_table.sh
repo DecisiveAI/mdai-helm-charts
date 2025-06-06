@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Usage: ./scripts/generate_chart_table.sh path/to/index.yaml
 
 INDEX_YAML=${1:-index.yaml}
