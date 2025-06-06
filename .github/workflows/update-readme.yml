@@ -37,10 +37,22 @@ jobs:
             /<!-- charts-start -->/r chart-table.md
           }' README.md
 
+      - uses: webfactory/ssh-agent@v0.9.1
+        with:
+          ssh-private-key: ${{ secrets.GH_PAGES_DEPLOY_KEY }}
+
+      - name: Add GitHub to known_hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+      - name: Configure SSH Git Remote
+        run: git remote set-url origin git@github.com:${{ github.repository }}.git
+
       - name: Commit and push changes
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add README.md
           git commit -m "chore(docs): update chart table in README.md [skip ci]" || echo "No changes"
-          git push
+          git push origin gh-pages
