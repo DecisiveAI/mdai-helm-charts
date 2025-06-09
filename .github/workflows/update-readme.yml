@@ -21,7 +21,7 @@ jobs:
 
       - name: Generate Chart Table
         run: |
-          bash .github/scripts/generate_chart_table.sh gh-pages/index.yaml > chart-table.md
+          bash .github/scripts/generate_chart_table.sh index.yaml > chart-table.md
 
       - name: Insert Chart Table into README.md
         run: |
