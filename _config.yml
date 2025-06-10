@@ -1,0 +1,6 @@
+title: MDAI Helm Charts
+description: Helm chart repository for DecisiveAI
+theme: jekyll-theme-primer
+markdown: kramdown
+github:
+  private: true
