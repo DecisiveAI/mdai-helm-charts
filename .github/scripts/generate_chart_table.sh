@@ -23,20 +23,31 @@ ACTIVE_TABLE+="\n|------------|-------------|---------|--------|"
 RETIRED_TABLE="| Chart Name | Description | Version | Values |"
 RETIRED_TABLE+="\n|------------|-------------|---------|--------|"
 
+LINK_DEFS=""
+
 while IFS= read -r line; do
   name=$(echo "$line" | awk -F'|' '{print $1}')
   desc=$(echo "$line" | awk -F'|' '{print $2}')
   version=$(echo "$line" | awk -F'|' '{print $3}')
 
-  if [ "$name" == "mdai-hub" ]; then
-    chart_link="[$name]($REPO_BASE_URL/mdai-helm-chart/blob/main/Chart.yaml)"
-    values_link="[values.yaml]($REPO_BASE_URL/mdai-helm-chart/blob/main/values.yaml)"
-  else
-    chart_link="[$name]($REPO_BASE_URL/$name/blob/main/deployment/Chart.yaml)"
-    values_link="[values.yaml]($REPO_BASE_URL/$name/blob/main/deployment/values.yaml)"
-  fi
+  chart_ref="[$name][$name-chart]"
+  version_ref="[$version][$name-tgz]"
+  values_ref="[values.yaml][$name-values]"
 
-  row="| $chart_link | $desc | [$version]($HELM_REPO_URL/$name-$version.tgz) | $values_link |"
+  if [ "$name" == "mdai-hub" ]; then
+    chart_url="$REPO_BASE_URL/mdai-helm-chart/blob/main/Chart.yaml"
+    values_url="$REPO_BASE_URL/mdai-helm-chart/blob/main/values.yaml"
+  else
+    chart_url="$REPO_BASE_URL/$name/blob/main/deployment/Chart.yaml"
+    values_url="$REPO_BASE_URL/$name/blob/main/deployment/values.yaml"
+  fi
+  tgz_url="$HELM_REPO_URL/$name-$version.tgz"
+
+  LINK_DEFS+="[$name-chart]: $chart_url"$'\n'
+  LINK_DEFS+="[$name-values]: $values_url"$'\n'
+  LINK_DEFS+="[$name-tgz]: $tgz_url"$'\n'
+
+  row="| $chart_ref | $desc | $version_ref | $values_ref |"
 
   if is_retired "$name"; then
     RETIRED_TABLE="$RETIRED_TABLE\n$row"
@@ -52,5 +63,6 @@ done < <(
   ' "$INDEX_YAML"
 )
 
-echo -e "## 📦 Available Charts\n\n$ACTIVE_TABLE\n"
-echo -e "## 📦 Retired/Archived Charts\n\n$RETIRED_TABLE"
+echo -e "## 📦 Available Charts\n\n$ACTIVE_TABLE"
+echo -e "\n## 📦 Retired/Archived Charts\n\n$RETIRED_TABLE"
+echo -e "\n\n<!-- Reference Links -->\n$LINK_DEFS"
