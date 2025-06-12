@@ -646,6 +646,54 @@ entries:
     version: 0.0.12
   mdai-hub:
   - apiVersion: v2
+    appVersion: 0.8.0-rc2
+    created: "2025-06-12T16:17:29.002139-05:00"
+    dependencies:
+    - condition: rabbitmq.enabled
+      name: rabbitmq
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: ~16.0.1
+    - condition: opentelemetry-operator.enabled
+      name: opentelemetry-operator
+      repository: https://open-telemetry.github.io/opentelemetry-helm-charts
+      version: ~0.71.2
+    - alias: kubeprometheusstack
+      condition: kubeprometheusstack.enabled
+      name: kube-prometheus-stack
+      repository: https://prometheus-community.github.io/helm-charts
+      version: ~65.3.1
+    - condition: metrics-server.enabled
+      name: metrics-server
+      repository: https://kubernetes-sigs.github.io/metrics-server
+      version: ~3.12.1
+    - condition: valkey.enabled
+      name: valkey
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: ~2.2.0
+    - condition: mdai-operator.enabled
+      name: mdai-operator
+      repository: https://decisiveai.github.io/mdai-helm-charts
+      version: 0.1.19
+    - condition: mdai-gateway.enabled
+      name: mdai-gateway
+      repository: https://decisiveai.github.io/mdai-helm-charts
+      version: 0.0.14
+    - condition: mdai-event-hub.enabled
+      name: mdai-event-hub
+      repository: https://decisiveai.github.io/mdai-helm-charts
+      version: 0.0.6
+    - condition: mdai-s3-logs-reader.enabled
+      name: mdai-s3-logs-reader
+      repository: https://decisiveai.github.io/mdai-helm-charts
+      version: 0.0.4
+    description: MDAI Hub helm chart
+    digest: f68155c9e0e4ba2d410cd549bc6f95fb6e59a6dc89485daa9e3c74b21dc9f77e
+    name: mdai-hub
+    type: application
+    urls:
+    - mdai-hub-0.8.0-rc2.tgz
+    version: 0.8.0-rc2
+  - apiVersion: v2
     appVersion: 0.8.0-dev
     created: "2025-06-10T12:19:53.30917-07:00"
     dependencies:
