@@ -1,4 +1,4 @@
-name: charts
+name: mdai-charts
 displayName: MDAI Helm Charts
 description: Helm charts for MDAI components
 type: helm
