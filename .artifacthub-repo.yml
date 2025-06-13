@@ -3,6 +3,7 @@ displayName: MDAI Helm Charts
 description: Helm charts for MDAI components
 type: helm
 url: https://charts.mydecisive.ai
+repositoryID: 8c04da8e-94fd-42cf-9549-b4ca0b5b3289
 ignore:
   - datalyzer
   - event-handler-webservice
