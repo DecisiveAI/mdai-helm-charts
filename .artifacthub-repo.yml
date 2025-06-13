@@ -1,0 +1,24 @@
+name: charts
+displayName: MDAI Helm Charts
+description: Helm charts for MDAI components
+type: helm
+url: https://charts.mydecisive.ai
+ignore:
+  - datalyzer
+  - event-handler-webservice
+  - event-hub-poc
+  - mdai-cluster
+  - mdai-api
+  - mdai-console
+  - mydecisive-api
+  - mydecisive-engine-operator
+  - mydecisive-engine-ui
+  - opentelemetry-demo
+  - otelcol-sample
+annotations:
+  artifacthub.io/links: |
+    - name: Source
+      url: https://charts.mydecisive.ai
+    - name: Documentation
+      url: https://docs.mydecisive.ai
+  artifacthub.io/license: AGPL-3.0-or-later
