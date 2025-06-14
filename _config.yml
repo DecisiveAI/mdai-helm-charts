@@ -4,3 +4,5 @@ theme: jekyll-theme-primer
 markdown: kramdown
 github:
   private: true
+include:
+  - .artifacthub-repo.yml
