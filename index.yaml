@@ -646,6 +646,55 @@ entries:
     version: 0.0.12
   mdai-hub:
   - apiVersion: v2
+    appVersion: 0.8.5-dev
+    created: "2025-07-08T14:56:25.805965-05:00"
+    dependencies:
+    - condition: rabbitmq.enabled
+      name: rabbitmq
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: ~16.0.1
+    - condition: opentelemetry-operator.enabled
+      name: opentelemetry-operator
+      repository: https://open-telemetry.github.io/opentelemetry-helm-charts
+      version: ~0.71.2
+    - alias: kubeprometheusstack
+      condition: kubeprometheusstack.enabled
+      name: kube-prometheus-stack
+      repository: https://prometheus-community.github.io/helm-charts
+      version: ~65.3.1
+    - condition: metrics-server.enabled
+      name: metrics-server
+      repository: https://kubernetes-sigs.github.io/metrics-server
+      version: ~3.12.1
+    - condition: valkey.enabled
+      name: valkey
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: ~2.2.0
+    - condition: mdai-operator.enabled
+      name: mdai-operator
+      repository: https://decisiveai.github.io/mdai-helm-charts
+      version: 0.1.19
+    - condition: mdai-gateway.enabled
+      name: mdai-gateway
+      repository: https://decisiveai.github.io/mdai-helm-charts
+      version: 0.0.14
+    - condition: mdai-event-hub.enabled
+      name: mdai-event-hub
+      repository: https://decisiveai.github.io/mdai-helm-charts
+      version: 0.0.6
+    - condition: mdai-s3-logs-reader.enabled
+      name: mdai-s3-logs-reader
+      repository: https://decisiveai.github.io/mdai-helm-charts
+      version: 0.0.5
+    description: MDAI Hub helm chart
+    digest: b2dab1c72c423a7208cc0000d4738344d1291664f0f94d25e918cf21a52494ea
+    kubeVersion: '>=1.24.0'
+    name: mdai-hub
+    type: application
+    urls:
+    - mdai-hub-0.8.5-dev.tgz
+    version: 0.8.5-dev
+  - apiVersion: v2
     appVersion: 0.8.0-rc3
     created: "2025-06-16T10:50:22.392222-05:00"
     dependencies:
@@ -1687,4 +1736,4 @@ entries:
     urls:
     - otelcol-sample-0.1.0.tgz
     version: 0.1.0
-generated: "2025-06-16T10:50:22.369601-05:00"
+generated: "2025-07-08T14:56:25.778925-05:00"
