@@ -173,6 +173,76 @@ entries:
     urls:
     - event-hub-poc-0.0.1.tgz
     version: 0.0.1
+  kube-prometheus-stack:
+  - annotations:
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/prometheus-community/helm-charts
+        - name: Upstream Project
+          url: https://github.com/prometheus-operator/kube-prometheus
+      artifacthub.io/operator: "true"
+    apiVersion: v2
+    appVersion: v0.77.1
+    created: "2025-07-08T13:31:28.215402-05:00"
+    dependencies:
+    - condition: crds.enabled
+      name: crds
+      repository: ""
+      version: 0.0.0
+    - condition: kubeStateMetrics.enabled
+      name: kube-state-metrics
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 5.26.*
+    - condition: nodeExporter.enabled
+      name: prometheus-node-exporter
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 4.39.*
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 8.5.*
+    - condition: windowsMonitoring.enabled
+      name: prometheus-windows-exporter
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 0.7.*
+    description: kube-prometheus-stack collects Kubernetes manifests, Grafana dashboards,
+      and Prometheus rules combined with documentation and scripts to provide easy
+      to operate end-to-end Kubernetes cluster monitoring with Prometheus using the
+      Prometheus Operator.
+    digest: f55ffbe525a3b98dc1c6999253facf45fcbca75ccf1064038a617d6c7d98bb67
+    home: https://github.com/prometheus-operator/kube-prometheus
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    keywords:
+    - operator
+    - prometheus
+    - kube-prometheus
+    kubeVersion: '>=1.19.0-0'
+    maintainers:
+    - email: andrew@quadcorps.co.uk
+      name: andrewgkew
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - email: github.gkarthiks@gmail.com
+      name: gkarthiks
+    - email: kube-prometheus-stack@sisti.pt
+      name: GMartinez-Sisti
+    - email: github@jkroepke.de
+      name: jkroepke
+    - email: scott@r6by.com
+      name: scottrigby
+    - email: miroslav.hadzhiev@gmail.com
+      name: Xtigyro
+    - email: quentin.bisson@gmail.com
+      name: QuentinBisson
+    name: kube-prometheus-stack
+    sources:
+    - https://github.com/prometheus-community/helm-charts
+    - https://github.com/prometheus-operator/kube-prometheus
+    type: application
+    urls:
+    - charts/kube-prometheus-stack-65.3.2.tgz
+    version: 65.3.2
   mdai-api:
   - apiVersion: v2
     appVersion: 0.0.3
@@ -575,13 +645,13 @@ entries:
   mdai-event-hub:
   - apiVersion: v2
     appVersion: 0.0.6
-    created: "2025-06-05T13:11:54.654884-04:00"
+    created: "2025-07-08T13:31:28.215563-05:00"
     description: MyDecisive Event Hub helm charts
     digest: ff14334698798fbb2645f8393ec2f3d1cd713a967ef819ad61a232c681102e9c
     name: mdai-event-hub
     type: application
     urls:
-    - mdai-event-hub-0.0.6.tgz
+    - charts/mdai-event-hub-0.0.6.tgz
     version: 0.0.6
   - apiVersion: v2
     appVersion: 0.0.5
@@ -616,13 +686,13 @@ entries:
   mdai-gateway:
   - apiVersion: v2
     appVersion: 0.0.14
-    created: "2025-06-05T13:24:12.726492-04:00"
+    created: "2025-07-08T13:31:28.215671-05:00"
     description: MyDecisive Gateway helm charts
     digest: 04f96bb2e7f71d0dcc2a80409ef91d67150f0055e01318f73aff46fc6d6f93b3
     name: mdai-gateway
     type: application
     urls:
-    - mdai-gateway-0.0.14.tgz
+    - charts/mdai-gateway-0.0.14.tgz
     version: 0.0.14
   - apiVersion: v2
     appVersion: 0.0.13
@@ -645,6 +715,55 @@ entries:
     - mdai-gateway-0.0.12.tgz
     version: 0.0.12
   mdai-hub:
+  - apiVersion: v2
+    appVersion: 0.8.5-dev
+    created: "2025-07-08T13:31:28.199819-05:00"
+    dependencies:
+    - condition: rabbitmq.enabled
+      name: rabbitmq
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: ~16.0.1
+    - condition: opentelemetry-operator.enabled
+      name: opentelemetry-operator
+      repository: https://open-telemetry.github.io/opentelemetry-helm-charts
+      version: ~0.71.2
+    - alias: kubeprometheusstack
+      condition: kubeprometheusstack.enabled
+      name: kube-prometheus-stack
+      repository: https://prometheus-community.github.io/helm-charts
+      version: ~65.3.1
+    - condition: metrics-server.enabled
+      name: metrics-server
+      repository: https://kubernetes-sigs.github.io/metrics-server
+      version: ~3.12.1
+    - condition: valkey.enabled
+      name: valkey
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: ~2.2.0
+    - condition: mdai-operator.enabled
+      name: mdai-operator
+      repository: https://decisiveai.github.io/mdai-helm-charts
+      version: 0.1.19
+    - condition: mdai-gateway.enabled
+      name: mdai-gateway
+      repository: https://decisiveai.github.io/mdai-helm-charts
+      version: 0.0.14
+    - condition: mdai-event-hub.enabled
+      name: mdai-event-hub
+      repository: https://decisiveai.github.io/mdai-helm-charts
+      version: 0.0.6
+    - condition: mdai-s3-logs-reader.enabled
+      name: mdai-s3-logs-reader
+      repository: https://decisiveai.github.io/mdai-helm-charts
+      version: 0.0.5
+    description: MDAI Hub helm chart
+    digest: a9ebf0876c59d074297e6a5858275ac129af2c78899e506c87bb14576cfe28d0
+    kubeVersion: '>=1.24.0'
+    name: mdai-hub
+    type: application
+    urls:
+    - mdai-hub-0.8.5-dev.tgz
+    version: 0.8.5-dev
   - apiVersion: v2
     appVersion: 0.8.0-rc3
     created: "2025-06-16T10:50:22.392222-05:00"
@@ -936,13 +1055,13 @@ entries:
   mdai-operator:
   - apiVersion: v2
     appVersion: 0.1.19
-    created: "2025-05-27T16:21:27.442187-05:00"
+    created: "2025-07-08T13:31:28.216604-05:00"
     description: MDAI Operator Helm Chart
     digest: ec71dab3d05cc7103ad42bf5cea8947c499f4d613fe3ee8eeed1dceac738e146
     name: mdai-operator
     type: application
     urls:
-    - mdai-operator-0.1.19.tgz
+    - charts/mdai-operator-0.1.19.tgz
     version: 0.1.19
   - apiVersion: v2
     appVersion: 0.1.18
@@ -1127,13 +1246,13 @@ entries:
   mdai-s3-logs-reader:
   - apiVersion: v2
     appVersion: 0.0.5
-    created: "2025-06-16T09:46:38.003343-05:00"
+    created: "2025-07-08T13:31:28.216694-05:00"
     description: MyDecisive S3 Logs Reader helm charts
     digest: 441d0bd5313dedef27be3a8e55f5e6bf3bbc8067321ec78321acea3c265566d6
     name: mdai-s3-logs-reader
     type: application
     urls:
-    - mdai-s3-logs-reader-0.0.5.tgz
+    - charts/mdai-s3-logs-reader-0.0.5.tgz
     version: 0.0.5
   - apiVersion: v2
     appVersion: 0.0.4
@@ -1165,6 +1284,43 @@ entries:
     urls:
     - mdai-s3-logs-reader-0.0.2.tgz
     version: 0.0.2
+  metrics-server:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: added
+          description: "Explicitly added the app protocol to the service."
+        - kind: changed
+          description: "Updated the _Metrics Server_ OCI image to [v0.7.2](https://github.com/kubernetes-sigs/metrics-server/releases/tag/v0.7.2)."
+        - kind: changed
+          description: "Updated the _addonResizer_ OCI image to [1.8.21](https://github.com/kubernetes/autoscaler/releases/tag/addon-resizer-1.8.21)"
+        - kind: fixed
+          description: "Fixed nanny's RoleBinding which contained a hard-coded namespace instead of the Helm's release namespace."
+    apiVersion: v2
+    appVersion: 0.7.2
+    created: "2025-07-08T13:31:28.217182-05:00"
+    description: Metrics Server is a scalable, efficient source of container resource
+      metrics for Kubernetes built-in autoscaling pipelines.
+    digest: e904ffa2fe33c429e12cac8aa013ba38f42d944e315d060e94230a53b98985cf
+    home: https://github.com/kubernetes-sigs/metrics-server
+    icon: https://avatars.githubusercontent.com/u/36015203?s=400&v=4
+    keywords:
+    - kubernetes
+    - metrics-server
+    - metrics
+    maintainers:
+    - name: stevehipwell
+      url: https://github.com/stevehipwell
+    - name: krmichel
+      url: https://github.com/krmichel
+    - name: endrec
+      url: https://github.com/endrec
+    name: metrics-server
+    sources:
+    - https://github.com/kubernetes-sigs/metrics-server
+    type: application
+    urls:
+    - charts/metrics-server-3.12.2.tgz
+    version: 3.12.2
   mydecisive-api:
   - apiVersion: v2
     appVersion: 0.0.1-alpha
@@ -1649,6 +1805,25 @@ entries:
     version: 0.25.1
   opentelemetry-operator:
   - apiVersion: v2
+    appVersion: 0.110.0
+    created: "2025-07-08T13:31:28.219179-05:00"
+    description: OpenTelemetry Operator Helm chart for Kubernetes
+    digest: adc1e89e38e94326c55a491a0f82f186bc82c7c244f8eb51065d46fdf3edf982
+    home: https://opentelemetry.io/
+    icon: https://raw.githubusercontent.com/cncf/artwork/a718fa97fffec1b9fd14147682e9e3ac0c8817cb/projects/opentelemetry/icon/color/opentelemetry-icon-color.png
+    maintainers:
+    - name: Allex1
+    - name: dmitryax
+    - name: jaronoff97
+    - name: TylerHelmuth
+    name: opentelemetry-operator
+    sources:
+    - https://github.com/open-telemetry/opentelemetry-operator
+    type: application
+    urls:
+    - charts/opentelemetry-operator-0.71.3.tgz
+    version: 0.71.3
+  - apiVersion: v2
     appVersion: 0.89.0
     created: "2024-12-06T15:33:04.844251-05:00"
     description: OpenTelemetry Operator Helm chart for Kubernetes
@@ -1687,4 +1862,85 @@ entries:
     urls:
     - otelcol-sample-0.1.0.tgz
     version: 0.1.0
-generated: "2025-06-16T10:50:22.369601-05:00"
+  rabbitmq:
+  - annotations:
+      category: Infrastructure
+      images: |
+        - name: os-shell
+          image: docker.io/bitnami/os-shell:12-debian-12-r47
+        - name: rabbitmq
+          image: docker.io/bitnami/rabbitmq:4.1.2-debian-12-r0
+      licenses: Apache-2.0
+      tanzuCategory: service
+    apiVersion: v2
+    appVersion: 4.1.2
+    created: "2025-07-08T13:31:28.221339-05:00"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: RabbitMQ is an open source general-purpose message broker that is
+      designed for consistent, highly-available messaging scenarios (both synchronous
+      and asynchronous).
+    digest: f011754d99d574b5c1072931ca8f288eb8984ad6bac6a33eb460295596b14c6e
+    home: https://bitnami.com
+    icon: https://dyltqmyl993wv.cloudfront.net/assets/stacks/rabbitmq/img/rabbitmq-stack-220x234.png
+    keywords:
+    - rabbitmq
+    - message queue
+    - AMQP
+    maintainers:
+    - name: Broadcom, Inc. All Rights Reserved.
+      url: https://github.com/bitnami/charts
+    name: rabbitmq
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/rabbitmq
+    urls:
+    - charts/rabbitmq-16.0.10.tgz
+    version: 16.0.10
+  valkey:
+  - annotations:
+      category: Database
+      images: |
+        - name: kubectl
+          image: docker.io/bitnami/kubectl:1.32.2-debian-12-r0
+        - name: os-shell
+          image: docker.io/bitnami/os-shell:12-debian-12-r37
+        - name: redis-exporter
+          image: docker.io/bitnami/redis-exporter:1.67.0-debian-12-r7
+        - name: valkey
+          image: docker.io/bitnami/valkey:8.0.2-debian-12-r2
+        - name: valkey-sentinel
+          image: docker.io/bitnami/valkey-sentinel:8.0.2-debian-12-r2
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 8.0.2
+    created: "2025-07-08T13:31:28.224084-05:00"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Valkey is an open source (BSD) high-performance key/value datastore
+      that supports a variety workloads such as caching, message queues, and can act
+      as a primary database.
+    digest: 13d30f18c6b87cf1cc3144deb4676d6f94012e77b55970b1ef2a97057b31f998
+    home: https://bitnami.com
+    icon: https://dyltqmyl993wv.cloudfront.net/assets/stacks/valkey/img/valkey-stack-220x234.png
+    keywords:
+    - valkey
+    - keyvalue
+    - database
+    maintainers:
+    - name: Broadcom, Inc. All Rights Reserved.
+      url: https://github.com/bitnami/charts
+    name: valkey
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/valkey
+    urls:
+    - charts/valkey-2.2.4.tgz
+    version: 2.2.4
+generated: "2025-07-08T13:31:28.175064-05:00"
