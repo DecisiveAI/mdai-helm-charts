@@ -5,10 +5,10 @@
 
 | Chart Name | Description | Version | Values |
 |------------|-------------|---------|--------|
-| [mdai-event-hub][mdai-event-hub-chart] | MyDecisive Event Hub helm charts | [0.0.6][mdai-event-hub-tgz] | [values.yaml][mdai-event-hub-values] |
+| [mdai-event-hub][mdai-event-hub-chart] | MyDecisive Event Hub helm charts | [0.0.9][mdai-event-hub-tgz] | [values.yaml][mdai-event-hub-values] |
 | [mdai-gateway][mdai-gateway-chart] | MyDecisive Gateway helm charts | [0.0.14][mdai-gateway-tgz] | [values.yaml][mdai-gateway-values] |
-| [mdai-hub][mdai-hub-chart] | MDAI Hub helm chart | [0.8.0-rc2][mdai-hub-tgz] | [values.yaml][mdai-hub-values] |
-| [mdai-operator][mdai-operator-chart] | MDAI Operator Helm Chart | [0.1.19][mdai-operator-tgz] | [values.yaml][mdai-operator-values] |
+| [mdai-hub][mdai-hub-chart] | MDAI Hub helm chart | [0.8.0-rc3][mdai-hub-tgz] | [values.yaml][mdai-hub-values] |
+| [mdai-operator][mdai-operator-chart] | MDAI Operator Helm Chart | [0.1.22][mdai-operator-tgz] | [values.yaml][mdai-operator-values] |
 | [mdai-s3-logs-reader][mdai-s3-logs-reader-chart] | MyDecisive S3 Logs Reader helm charts | [0.0.5][mdai-s3-logs-reader-tgz] | [values.yaml][mdai-s3-logs-reader-values] |
 | [opentelemetry-operator][opentelemetry-operator-chart] | OpenTelemetry Operator Helm chart for Kubernetes | [0.43.1][opentelemetry-operator-tgz] | [values.yaml][opentelemetry-operator-values] |
 
@@ -50,16 +50,16 @@
 [mdai-console-tgz]: https://decisiveai.github.io/mdai-helm-charts/mdai-console-0.2.4.tgz
 [mdai-event-hub-chart]: https://github.com/DecisiveAI/mdai-event-hub/blob/main/deployment/Chart.yaml
 [mdai-event-hub-values]: https://github.com/DecisiveAI/mdai-event-hub/blob/main/deployment/values.yaml
-[mdai-event-hub-tgz]: https://decisiveai.github.io/mdai-helm-charts/mdai-event-hub-0.0.6.tgz
+[mdai-event-hub-tgz]: https://decisiveai.github.io/mdai-helm-charts/mdai-event-hub-0.0.9.tgz
 [mdai-gateway-chart]: https://github.com/DecisiveAI/mdai-gateway/blob/main/deployment/Chart.yaml
 [mdai-gateway-values]: https://github.com/DecisiveAI/mdai-gateway/blob/main/deployment/values.yaml
 [mdai-gateway-tgz]: https://decisiveai.github.io/mdai-helm-charts/mdai-gateway-0.0.14.tgz
 [mdai-hub-chart]: https://github.com/DecisiveAI/mdai-helm-chart/blob/main/Chart.yaml
 [mdai-hub-values]: https://github.com/DecisiveAI/mdai-helm-chart/blob/main/values.yaml
-[mdai-hub-tgz]: https://decisiveai.github.io/mdai-helm-charts/mdai-hub-0.8.0-rc2.tgz
+[mdai-hub-tgz]: https://decisiveai.github.io/mdai-helm-charts/mdai-hub-0.8.0-rc3.tgz
 [mdai-operator-chart]: https://github.com/DecisiveAI/mdai-operator/blob/main/deployment/Chart.yaml
 [mdai-operator-values]: https://github.com/DecisiveAI/mdai-operator/blob/main/deployment/values.yaml
-[mdai-operator-tgz]: https://decisiveai.github.io/mdai-helm-charts/mdai-operator-0.1.19.tgz
+[mdai-operator-tgz]: https://decisiveai.github.io/mdai-helm-charts/mdai-operator-0.1.22.tgz
 [mdai-s3-logs-reader-chart]: https://github.com/DecisiveAI/mdai-s3-logs-reader/blob/main/deployment/Chart.yaml
 [mdai-s3-logs-reader-values]: https://github.com/DecisiveAI/mdai-s3-logs-reader/blob/main/deployment/values.yaml
 [mdai-s3-logs-reader-tgz]: https://decisiveai.github.io/mdai-helm-charts/mdai-s3-logs-reader-0.0.5.tgz
