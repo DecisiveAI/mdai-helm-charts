@@ -625,6 +625,16 @@ entries:
     version: 0.0.1
   mdai-gateway:
   - apiVersion: v2
+    appVersion: 0.0.15
+    created: "2025-07-09T15:18:18.839276-04:00"
+    description: MyDecisive Gateway helm charts
+    digest: 3be2fd14557f977e5320ef9b697b224150fe3751eb04f1d39de44494f54d67f6
+    name: mdai-gateway
+    type: application
+    urls:
+    - mdai-gateway-0.0.15.tgz
+    version: 0.0.15
+  - apiVersion: v2
     appVersion: 0.0.14
     created: "2025-06-05T13:24:12.726492-04:00"
     description: MyDecisive Gateway helm charts
@@ -1756,4 +1766,4 @@ entries:
     urls:
     - otelcol-sample-0.1.0.tgz
     version: 0.1.0
-generated: "2025-07-09T11:27:29.283886-07:00"
+generated: "2025-07-09T15:18:18.838948-04:00"
