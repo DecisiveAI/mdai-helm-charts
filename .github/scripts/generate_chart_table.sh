@@ -2,7 +2,7 @@
 # Usage: ./scripts/generate_chart_table.sh path/to/index.yaml
 
 INDEX_YAML=${1:-index.yaml}
-HELM_REPO_URL="https://decisiveai.github.io/mdai-helm-charts"
+HELM_REPO_URL="https://charts.mydecisive.ai"
 REPO_BASE_URL="https://github.com/DecisiveAI"
 HELM_NAMESPACE=mdai
 
@@ -35,8 +35,8 @@ while IFS= read -r line; do
   values_ref="[values.yaml][$name-values]"
 
   if [ "$name" == "mdai-hub" ]; then
-    chart_url="$REPO_BASE_URL/mdai-helm-chart/blob/main/Chart.yaml"
-    values_url="$REPO_BASE_URL/mdai-helm-chart/blob/main/values.yaml"
+    chart_url="$REPO_BASE_URL/mdai-hub/blob/main/Chart.yaml"
+    values_url="$REPO_BASE_URL/mdai-hub/blob/main/values.yaml"
   else
     chart_url="$REPO_BASE_URL/$name/blob/main/deployment/Chart.yaml"
     values_url="$REPO_BASE_URL/$name/blob/main/deployment/values.yaml"
