@@ -2,7 +2,7 @@
 # Usage: ./scripts/generate_chart_table.sh path/to/index.yaml
 
 INDEX_YAML=${1:-index.yaml}
-HELM_REPO_URL="https://decisiveai.github.io/mdai-helm-charts"
+HELM_REPO_URL="https://charts.mydecisive.ai"
 REPO_BASE_URL="https://github.com/DecisiveAI"
 HELM_NAMESPACE=mdai
 
