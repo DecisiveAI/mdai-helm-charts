@@ -574,6 +574,16 @@ entries:
     version: 0.0.6-cognito
   mdai-event-hub:
   - apiVersion: v2
+    appVersion: 0.0.9
+    created: "2025-07-09T14:09:28.044485-04:00"
+    description: MyDecisive Event Hub helm charts
+    digest: b28536f7db8594e12445bfc429d9491357f353027086f99249c886c6bd85cdff
+    name: mdai-event-hub
+    type: application
+    urls:
+    - mdai-event-hub-0.0.9.tgz
+    version: 0.0.9
+  - apiVersion: v2
     appVersion: 0.0.6
     created: "2025-06-05T13:11:54.654884-04:00"
     description: MyDecisive Event Hub helm charts
@@ -1697,4 +1707,4 @@ entries:
     urls:
     - otelcol-sample-0.1.0.tgz
     version: 0.1.0
-generated: "2025-07-07T13:12:50.789349-05:00"
+generated: "2025-07-09T14:09:28.044023-04:00"
