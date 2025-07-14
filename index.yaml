@@ -715,7 +715,7 @@ entries:
     version: 0.8.5-dev
   - apiVersion: v2
     appVersion: 0.8.0
-    created: "2025-07-09T11:27:29.311988-07:00"
+    created: "2025-07-11T17:42:29.26061-07:00"
     dependencies:
     - condition: rabbitmq.enabled
       name: rabbitmq
@@ -755,8 +755,7 @@ entries:
       repository: https://decisiveai.github.io/mdai-helm-charts
       version: 0.0.5
     description: MDAI Hub helm chart
-    digest: 6c892a8709a907df455caec7512b06bdf59d8026fb995830644f38267626099e
-    kubeVersion: '>=1.24.0'
+    digest: bdc7d8cb6a04e06bcfac351a2beaf44164ff0c4f09cb0947ff6859951e736d85
     name: mdai-hub
     type: application
     urls:
