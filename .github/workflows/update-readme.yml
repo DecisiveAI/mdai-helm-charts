@@ -7,20 +7,29 @@ on:
     paths:
       - index.yaml
       - '*.tgz'
+  workflow_dispatch:
 
 jobs:
   update-readme:
     runs-on: ubuntu-latest
     steps:
+      - name: Generate token
+        id: generate_token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.GH_PAGES_APP_ID }}
+          private-key: ${{ secrets.GH_PAGES_APP_PRIVATE_KEY }}
+
       - name: Checkout gh-pages branch
         uses: actions/checkout@v4
         with:
           ref: gh-pages
+          token: ${{ steps.generate_token.outputs.token }}
 
       - name: Install yq
-        run: |
-          curl -sL https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64 -o /usr/local/bin/yq
-          chmod +x /usr/local/bin/yq
+        uses: frenck/action-setup-yq@c4b5be8b4a215c536a41d436757d9feb92836d4f  # v1.0.2
+        with:
+          version: v4.45.4
 
       - name: Generate Chart Table
         run: |
@@ -33,22 +42,14 @@ jobs:
             /<!-- charts-start -->/r chart-table.md
           }' README.md
 
-      - uses: webfactory/ssh-agent@v0.9.1
-        with:
-          ssh-private-key: ${{ secrets.GH_PAGES_DEPLOY_KEY }}
-
-      - name: Add GitHub to known_hosts
-        run: |
-          mkdir -p ~/.ssh
-          ssh-keyscan github.com >> ~/.ssh/known_hosts
-
-      - name: Configure SSH Git Remote
-        run: git remote set-url origin git@github.com:${{ github.repository }}.git
-
       - name: Commit and push changes
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add README.md
-          git commit -m "chore(docs): update chart table in README.md [skip ci]" || echo "No changes"
-          git push origin gh-pages
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore(docs): update chart table in README.md [skip ci]"
+            git push origin gh-pages
+          fi
